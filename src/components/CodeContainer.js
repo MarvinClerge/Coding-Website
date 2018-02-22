@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import User from './User'
+import UserContainer from './UserContainer'
 import Code from './Code'
 import LessonContainer from './LessonContainer'
+import '../css/code-container.css'
 
 class CodeContainer extends Component {
 
@@ -11,7 +12,7 @@ class CodeContainer extends Component {
       <div className="code-container">
         <LessonContainer />
         <Code />
-        <User />
+        <UserContainer />
       </div>
     )
   }

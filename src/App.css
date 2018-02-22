@@ -33,14 +33,3 @@ body {
   width: 100%;
   height: 50vh;
 }
-
-.code-container {
-  display: flex;
-}
-
-.code-container > div {
-  box-sizing: border-box;
-  border: 1px solid;
-  width: 33.33%;
-  height: 95vh;
-}
