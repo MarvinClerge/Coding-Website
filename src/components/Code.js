@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import AceEditor from 'react-ace'
+import Interpreter from 'js-interpreter'
 import '../css/code.css'
-
 
 import 'brace/mode/javascript'
 import 'brace/theme/monokai'
+
+
 
 class Code extends Component {
   state = {
@@ -20,9 +22,10 @@ class Code extends Component {
 
   handleCodeEvaluation = event => {
     try {
-      let output = eval(this.state.input)
+      const myInterpreter = new Interpreter(this.state.input);
+      myInterpreter.run()
       this.setState({
-        output: output
+        output: myInterpreter.value.data
       })
     } catch (error) {
       this.setState({
@@ -34,6 +37,7 @@ class Code extends Component {
   render(){
     return(
       <div className="code">
+
         <AceEditor
           mode="javascript"
           theme="monokai"
@@ -44,13 +48,21 @@ class Code extends Component {
           focus={true}
           fontSize="15px"
         />
+
         <button
           id="run-code"
-          onClick={this.handleCodeEvaluation}>run code</button>
-        <div id="output">{this.state.output}</div>
+          onClick={this.handleCodeEvaluation}
+        >run code</button>
+
+        <div id="output">
+          {this.state.output}
+        </div>
+
       </div>
     )
   }
 }
+
+
 
 export default Code

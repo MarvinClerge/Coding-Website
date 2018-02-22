@@ -10,6 +10,7 @@ class CodeContainer extends Component {
   render(){
     return(
       <div className="code-container">
+        
         <LessonContainer />
         <Code />
         <UserContainer />
