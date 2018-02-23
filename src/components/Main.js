@@ -25,7 +25,11 @@ class Main extends Component {
   handleLogin = event => {
     event.preventDefault()
     userAdapter.login(this.state)
-    .then(console.log)
+    .then(data => {
+      if (!data.error){
+        localStorage.setItem('token', data.token)
+      }
+    })
   }
 
   render(){
