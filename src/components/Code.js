@@ -46,6 +46,7 @@ class Code extends Component {
       } else {
         return \"FAILED: ${this.props.challenge.test_description}\"
       }`
+
       console.log(declaration + test);
     }
 
