@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
 import AceEditor from 'react-ace'
 import Interpreter from 'js-interpreter'
 import '../css/code.css'
@@ -6,33 +9,34 @@ import '../css/code.css'
 import 'brace/mode/javascript'
 import 'brace/theme/monokai'
 
+import { changeCodeValue } from '../actions/code'
 
 
 class Code extends Component {
-  state = {
-    input: "",
-    output: ""
-  }
 
   handleEditorChange = code => {
-    this.setState({
-      input: code
+    this.props.changeCodeValue({
+      type: 'input',
+      value: code
     })
   }
 
   handleCodeEvaluation = event => {
     try {
-      const myInterpreter = new Interpreter(this.state.input);
+      const myInterpreter = new Interpreter(this.props.input);
       myInterpreter.run()
-      this.setState({
-        output: myInterpreter.value.data
+      this.props.changeCodeValue({
+        type: 'output',
+        value: myInterpreter.value.data
       })
     } catch (error) {
-      this.setState({
-        output: error.toString()
+      this.props.changeCodeValue({
+        type: 'output',
+        value: error.toString()
       })
     }
   }
+
 
   render(){
     return(
@@ -44,7 +48,7 @@ class Code extends Component {
           width="100%"
           height="60vh"
           onChange={this.handleEditorChange}
-          value={this.state.input}
+          value={this.props.input}
           focus={true}
           fontSize="15px"
         />
@@ -55,7 +59,7 @@ class Code extends Component {
         >run code</button>
 
         <div id="output">
-          {this.state.output}
+          {this.props.output}
         </div>
 
       </div>
@@ -63,6 +67,17 @@ class Code extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    input: state.code.input,
+    output: state.code.output
+  }
+}
 
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({
+    changeCodeValue: changeCodeValue
+  }, dispatch)
+}
 
-export default Code
+export default connect(mapStateToProps, mapDispatchToProps)(Code)

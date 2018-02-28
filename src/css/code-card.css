@@ -1,0 +1,38 @@
+.code-card-container {
+  margin: .2vw auto;
+  background: #f2f2f2;
+  width: 85%;
+  height: 9vh;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  padding: .2vw;
+  display: flex;
+  white-space: pre-line;
+
+}
+
+.code-main {
+  width: 90%;
+  overflow: hidden;
+}
+
+.code-manage {
+}
+
+.load {
+  box-sizing: border-box;
+  border: 0;
+  height: 50%;
+  width: 100%;
+  color: white;
+  background: #588cb7;
+}
+
+.delete {
+  box-sizing: border-box;
+  border: 0;
+  height: 50%;
+  width: 100%;
+  color: white;
+  background: #b75858;
+}

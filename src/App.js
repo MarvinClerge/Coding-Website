@@ -1,31 +1,21 @@
-import React, { Component } from 'react';
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import CodeContainer from './components/CodeContainer'
-import { Route, Switch } from 'react-router-dom'
-import userAdapter from './adapter/user_adapter'
 import './App.css'
+
+import React, { Component } from 'react';
+import { Route, Switch, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import Home from './components/Home'
+import Navbar from './components/Navbar'
+import CodeContainer from './components/CodeContainer'
+
+import { setUser } from './actions/auth'
 
 
 class App extends Component {
-  state = {
-    auth: {
-      loggedIn: false,
-      token: null
-    }
-  }
   componentDidMount(){
     const token = localStorage.getItem('token')
-    if (token) {
-      console.log('LOGGED IN');
-      userAdapter.currentUser()
-      .then(response => response.json())
-      .then(console.log)
-
-      // this.setState({
-      //   auth: {loggedIn: true, token: token}
-      // })
-    }
+    this.props.setUser(token)
   }
 
   render() {
@@ -35,13 +25,17 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={Home} />
-
           <Route path="/code" component={CodeContainer} />
-
         </Switch>
       </div>
     );
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({
+    setUser: setUser
+  }, dispatch)
+}
+
+export default withRouter( connect(null, mapDispatchToProps)(App) ) ;

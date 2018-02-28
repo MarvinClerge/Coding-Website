@@ -6,36 +6,36 @@ const headers = {
   'Authorization': token
 }
 
-const signup = state => {
+const signup = input => {
   return fetch('http://localhost:3001/api/v1/signup', {
     method: 'POST',
     headers: headers,
     body: JSON.stringify({
-      username: state.signupUsername,
-      password: state.signupPassword,
-      passwordConfirmation: state.signupPasswordConfirmation
+      username: input.username,
+      password: input.password,
+      passwordConfirmation: input.passwordConfirmation
     })
   })
   .then(res => res.json())
 }
 
-const login = state => {
+const login = input => {
   return fetch('http://localhost:3001/api/v1/login', {
     method: 'POST',
     headers: headers,
     body: JSON.stringify({
-      username: state.loginUsername,
-      password: state.loginPassword
+      username: input.username,
+      password: input.password
     })
   })
   .then(res => res.json())
 }
 
 const currentUser = token => {
-  console.log('fetching data');
   return fetch('http://localhost:3001/api/v1/current_user', {
     headers: headers
   })
+  .then(response => response.json())
 }
 
 const userAdapter = {
@@ -43,4 +43,5 @@ const userAdapter = {
   login: login,
   currentUser: currentUser
 }
+
 export default userAdapter
