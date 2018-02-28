@@ -13,7 +13,7 @@ const initalState = {
   },
   challenge: {
     challenges: [],
-    currentId: null
+    current: null
   }
 }
 
@@ -108,7 +108,6 @@ export default function rootReducer(state = initalState, action){
           currentId: action.payload.id
         }
       })
-      return state
 
     case "DELETE_CODE":
       index = state.code.codes.findIndex(code => {
@@ -125,6 +124,20 @@ export default function rootReducer(state = initalState, action){
         }
       });
 
+      case "LOAD_CHALLENGE":
+        return Object.assign({}, state, {
+          status: 'challenge',
+          code: {
+            ...state.code,
+            input: action.payload.content,
+            output: '',
+            currentId: null
+          },
+          challenge: {
+            ...state.challenge,
+            current: action.payload.challenge
+          }
+        })
 
     default:
       return state;

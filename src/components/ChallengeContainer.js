@@ -9,7 +9,7 @@ import '../css/lesson-container.css'
 
 class ChallengeContainer extends Component {
   state = {
-    active: false
+    active: true
   }
 
   toggleActive = event => {
@@ -22,8 +22,8 @@ class ChallengeContainer extends Component {
     if (this.props.loggedIn) {
       return (
         <div>
-          <button onClick={this.initChallenge}>
-            Create New Challenge
+          <button onClick={this.initChallenge} className="challenge-create">
+            <h1>Create New Challenge</h1>
           </button>
         </div>
       )
@@ -31,7 +31,6 @@ class ChallengeContainer extends Component {
   }
 
   initChallenge = () => {
-    let output = v1
     this.props.changeCodeValue({
       type: 'input',
       value: v1
@@ -40,11 +39,18 @@ class ChallengeContainer extends Component {
 
   }
 
+  renderChallenges = () => {
+    return this.props.challenges.map(challenge => {
+      return <Challenge key={challenge.id} {...challenge}/>
+    })
+  }
+
   render(){
     return(
       <div className="left-container">
         <div className={`lesson-container ${this.state.active ? "l-active" : "l-unactive"}`}>
           {this.renderUserActions()}
+          {this.renderChallenges()}
         </div>
         <button
           onClick={this.toggleActive}

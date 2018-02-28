@@ -23,7 +23,7 @@ export const login = input => {
   return dispatch => {
     userAdapter.login(input)
     .then(data => {
-      if (!data.error) {
+      if (data.user && !data.error) {
         localStorage.setItem('token', data.token)
         let payload = {
           user: data.user,
@@ -71,7 +71,6 @@ export const logout = () => {
 }
 
 const loginReducer = payload => {
-  console.log(payload);
   return {
     type: "LOGIN",
     payload: payload
@@ -79,7 +78,6 @@ const loginReducer = payload => {
 }
 
 const challengeReducer = payload => {
-  console.log(payload);
   return {
     type: "SET_CHALLENGES",
     payload: payload

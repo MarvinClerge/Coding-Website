@@ -1,0 +1,33 @@
+.challenge-container {
+  margin: .2vw auto;
+  background: #f2f2f2;
+  width: 85%;
+  height: 15vh;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  padding: .2vw;
+  white-space: pre-line;
+}
+
+.challenge-start {
+  width: 100%;
+  height: 20%;
+  border: 0;
+  background: #a0bfa2;
+  color: white;
+}
+
+.challenge-create {
+  width: 100%;
+  height: 3vh;
+  border: 0;
+  background: #8ba88d;
+  color: white;
+}
+
+.challenge-start > h3{
+  margin: 0;
+}
+.challenge-create > h1{
+  margin: 0;
+}

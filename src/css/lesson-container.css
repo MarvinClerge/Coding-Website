@@ -19,6 +19,6 @@
 }
 .l-unactive {
   width: 0vw;
-  display: none;
   background: black;
+  display: none;
 }
