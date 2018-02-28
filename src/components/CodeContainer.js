@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import UserContainer from './UserContainer'
 import Code from './Code'
-import LessonContainer from './LessonContainer'
+import ChallengeContainer from './ChallengeContainer'
 import '../css/code-container.css'
 
 class CodeContainer extends Component {
@@ -11,7 +11,7 @@ class CodeContainer extends Component {
     return(
       <div className="code-container">
 
-        <LessonContainer />
+        <ChallengeContainer />
         <Code />
         <UserContainer />
       </div>

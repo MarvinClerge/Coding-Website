@@ -20,8 +20,11 @@ const initalState = {
 export default function rootReducer(state = initalState, action){
   let index, newCodes;
 
-
   switch (action.type) {
+    case "CHANGE_STATUS":
+      return Object.assign({}, state, {
+        status: action.status
+      })
     // AUTH
     case "LOGIN":
       return Object.assign({}, state, {
@@ -38,6 +41,20 @@ export default function rootReducer(state = initalState, action){
         }
       });
 
+    case "LOGOUT":
+      return Object.assign({}, state, {
+        auth: {
+          token: null,
+          loggedIn: false,
+          currentUser: null
+        },
+        code: {
+          ...state.codes,
+          codes: [],
+          currentId: null
+        }
+      })
+
     case "SET_CHALLENGES":
       return Object.assign({}, state, {
         challenge: {
@@ -53,22 +70,6 @@ export default function rootReducer(state = initalState, action){
           [action.payload.type]: action.payload.value
         }
       });
-
-    case "INPUT":
-      return Object.assign({}, state, {
-        code: {
-          ...state.code,
-          input: action.value
-        }
-      })
-
-    case "OUTPUT":
-      return Object.assign({}, state, {
-        code: {
-          ...state.code,
-          output: action.value
-        }
-      })
 
     case "CREATE_CODE":
       return Object.assign({}, state, {
@@ -98,8 +99,9 @@ export default function rootReducer(state = initalState, action){
         }
       });
 
-    case "LOAD":
+    case "LOAD_CODE":
       return Object.assign({}, state, {
+        status: 'code',
         code: {
           ...state.code,
           input: action.payload.content,

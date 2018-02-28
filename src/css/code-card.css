@@ -2,13 +2,20 @@
   margin: .2vw auto;
   background: #f2f2f2;
   width: 85%;
-  height: 9vh;
+  height: 15vh;
   margin-bottom: 2vh;
   margin-top: 2vh;
   padding: .2vw;
   display: flex;
   white-space: pre-line;
 
+}
+
+.here{
+  display: flex;
+}
+.here > div {
+  padding: 10px;
 }
 
 .code-main {

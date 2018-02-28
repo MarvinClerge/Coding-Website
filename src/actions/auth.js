@@ -63,6 +63,13 @@ export const setUser = token => {
   }
 }
 
+export const logout = () => {
+  localStorage.removeItem('token')
+  return {
+    type: "LOGOUT"
+  }
+}
+
 const loginReducer = payload => {
   console.log(payload);
   return {

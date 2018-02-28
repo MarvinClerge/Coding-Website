@@ -51,6 +51,7 @@ class Code extends Component {
           value={this.props.input}
           focus={true}
           fontSize="15px"
+          editorProps={{$blockScrolling: Infinity}}
         />
 
         <button

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { login, signup } from '../actions/auth'
+import { login, signup, logout } from '../actions/auth'
 
 class Main extends Component {
   state = {
@@ -59,40 +59,63 @@ class Main extends Component {
     })
   }
 
+  handleLogout = event => {
+    this.props.logout()
+  }
+
+  handleLoginRender = () => {
+    if (this.props.loggedIn) {
+      return(
+        <button onClick={this.handleLogout}>
+          Logout
+        </button>
+      )
+    } else {
+      return(
+        <div className="here">
+          <div>
+            <form onSubmit={this.handleSignup}>
+
+              <h3>Create a new account</h3>
+
+              <label>Username: </label>
+              <input type="text" name="username" onChange={this.onSignupChange} value={this.state.signup.username}/><br />
+
+              <label>Password: </label>
+              <input type="password" name="password" onChange={this.onSignupChange} value={this.state.signup.password}/><br />
+
+              <label>Confirm Password: </label>
+              <input type="password" name="passwordConfirmation" onChange={this.onSignupChange} value={this.state.signup.passwordConfirmation}/><br />
+
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+
+          <div>
+            <form onSubmit={this.handleLogin}>
+              <h3>Login</h3>
+
+              <label>Username: </label>
+              <input type="text" name="username" onChange={this.onLoginChange} value={this.state.login.username}/><br />
+
+              <label>Password: </label>
+              <input type="password" name="password" onChange={this.onLoginChange} value={this.state.login.password}/><br />
+
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+      )
+    }
+  }
+
   render(){
     console.log(this.props.loggedIn);
     return(
       <div className="main">
         <div>intro / start coding</div>
+        {this.handleLoginRender()}
 
-        <form onSubmit={this.handleSignup}>
-
-          <h3>Create a new account</h3>
-
-          <label>Username: </label>
-          <input type="text" name="username" onChange={this.onSignupChange} value={this.state.signup.username}/><br />
-
-          <label>Password: </label>
-          <input type="password" name="password" onChange={this.onSignupChange} value={this.state.signup.password}/><br />
-
-          <label>Confirm Password: </label>
-          <input type="password" name="passwordConfirmation" onChange={this.onSignupChange} value={this.state.signup.passwordConfirmation}/><br />
-
-          <input type="submit" value="Submit" />
-        </form>
-
-
-        <form onSubmit={this.handleLogin}>
-          <h3>Login</h3>
-
-          <label>Username: </label>
-          <input type="text" name="username" onChange={this.onLoginChange} value={this.state.login.username}/><br />
-
-          <label>Password: </label>
-          <input type="password" name="password" onChange={this.onLoginChange} value={this.state.login.password}/><br />
-
-          <input type="submit" value="Submit" />
-        </form>
       </div>
     )
   }
@@ -109,7 +132,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
     login: login,
-    signup: signup
+    signup: signup,
+    logout: logout
   }, dispatch)
 }
 

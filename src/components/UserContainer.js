@@ -5,7 +5,7 @@ import '../css/user-container.css'
 
 class UserContainer extends Component {
   state = {
-    active: true,
+    active: false,
   }
 
   toggleActive = event => {
@@ -15,10 +15,11 @@ class UserContainer extends Component {
   }
 
   renderCodes = () => {
-    console.log(this.props);
-    return this.props.codes.slice().map(code => {
-      return <CodeCard key={code.id} {...code} />
-    })
+    if (this.props.codes.length > 0) {
+      return this.props.codes.slice().map(code => {
+        return <CodeCard key={code.id} {...code} />
+      })
+    }
   }
 
   renderUser = () => {

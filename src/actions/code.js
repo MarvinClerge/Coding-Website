@@ -64,7 +64,7 @@ const saveCodeReducer = data => {
 
 export const loadCode = (code) => {
   return {
-    type: "LOAD",
+    type: "LOAD_CODE",
     payload: code
   }
 }
