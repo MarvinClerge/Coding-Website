@@ -10,7 +10,7 @@
 }
 
 .lesson-container {
-
+  overflow: auto;
 }
 
 .l-active {
@@ -21,4 +21,28 @@
   width: 0vw;
   background: black;
   display: none;
+}
+
+.create-challenge-container {
+  box-sizing: border-box;
+  border: 3px solid;
+  height: 50vh;
+  padding: 0px 10px 0px 10px;
+  transition: 3s;
+}
+
+
+input[type="text"] {
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid black;
+  width: 60%;
+  font-size: 1.5vw;
+  height: 3vh;
+  margin: 10px 0 10px 0;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 4px solid green;
 }

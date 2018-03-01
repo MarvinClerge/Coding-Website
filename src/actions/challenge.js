@@ -1,3 +1,5 @@
+import challengeAdapter from '../adapter/challenge_adapter'
+
 export const loadChallenge = challenge => {
   let content = `//${challenge.description}
 function challenge(value){
@@ -9,9 +11,24 @@ function challenge(value){
     content: content
   }
 
-  console.log(challenge);
   return {
     type: "LOAD_CHALLENGE",
     payload: payload
+  }
+}
+
+export const createChallenge = value => {
+  return dispatch => {
+    challengeAdapter.submitChallenge(value)
+    .then(console.log)
+    dispatch(createReducer(value))
+  }
+
+
+}
+
+const createReducer = (payload) => {
+  return {
+    type: "HELLO"
   }
 }
