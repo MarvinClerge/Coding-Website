@@ -22,7 +22,6 @@ class Code extends Component {
   }
 
   handleCodeEvaluation = event => {
-    console.log(this.props.status);
     if (this.props.status === 'code') { // regular coding
       try {
         const myInterpreter = new Interpreter(this.props.input);
@@ -39,15 +38,31 @@ class Code extends Component {
       }
     } else if (this.props.status === 'challenge'){ // challenge coding
       let x = this.props.input.split('function challenge(value){')[1]
-      let declaration = "function challenge(value){" + x
+      let declaration = `function challenge(value){ ${x}`
       let call = `challenge(${this.props.challenge.test_value})`
-      let test = `if (${call} === ${this.props.challenge.test_expected}) {
-        return \"PASSED: ${this.props.challenge.test_description}\"
+      let test = `
+      if (${call} === ${this.props.challenge.test_expected}) {
+        "PASSED: ${this.props.challenge.test_description}"
       } else {
-        return \"FAILED: ${this.props.challenge.test_description}\"
+        "FAILED: expected ${call} to equal ${this.props.challenge.test_description}"
       }`
 
-      console.log(declaration + test);
+      let finalCode = declaration + test
+
+      try {
+        const myInterpreter = new Interpreter(finalCode);
+        myInterpreter.run()
+        this.props.changeCodeValue({
+          type: 'output',
+          value: myInterpreter.value.data
+        })
+      } catch (error) {
+        this.props.changeCodeValue({
+          type: 'output',
+          value: error.toString()
+        })
+      }
+
     }
 
   }
