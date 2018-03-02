@@ -38,20 +38,20 @@ body {
   "code auth";
 }
 
-.navbar-logout {
+#menu-button {
   border: 0;
   grid-area: auth;
   color: white;
-  background: #a7b2bc;
-  font-size: 1.5vw;
+  background: none;
+  font-size: 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 @media screen and (min-width: 1025px) {
-  .navbar-logout {
-    font-size: 1vw;
+  #menu-button {
+    font-size: 3vw;
   }
 }
 
@@ -161,4 +161,134 @@ body {
   .signup-text {
     font-size: 1vw;
   }
+}
+
+/* CODE CONTAINER CONTENT */
+
+.code-container {
+  display: flex;
+  height: 93vh;
+  max-width: 100vw;
+}
+
+.code-editor {
+  background: grey;
+  width: 100%;
+  height: 93vh;
+}
+
+.side {
+  background: darkgrey;
+  height: 93vh;
+  overflow: auto;
+  transition: .2s;
+}
+
+.side-active{
+  width: 50%;
+  transition: .2s;
+  overflow: auto;
+}
+
+.side-inactive{
+  width: 0%;
+  overflow: hidden;
+  transition: .2s;
+}
+
+#run-code {
+  width: 100%;
+  height: 5%;
+  background: #282c30;
+  color: white;
+  border: 0;
+}
+
+#output {
+  height: 30%;
+}
+
+@media screen and (min-width: 1025px) {
+}
+
+/* SIDE CONTENT */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+  background: #c7d6d2;
+}
+
+.active-tab {
+  width: 55%;
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .1% 0 .1%;
+  background: #c7d6d2;
+}
+
+.inactive-tab {
+  width: 50%;
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99afaa;
+}
+
+
+/* USER CONTAINER CONTENT */
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CODE CARD CONTENT */
+.card-container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  width: 90%;
+  height: 20vh;
+}
+
+.card-time {
+  color: #999999;
+  width: 100%;
+  height: 10%;
+}
+
+.card-main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70%;
+  white-space: pre-line;
+  padding: 2%;
+}
+
+.code-manage {
+  align-self: flex-end;
+  width: 100%;
+  height: 20%;
+}
+
+.load {
+  border: 0;
+  background: #a7bed1;
+  width: 90%;
+  height: 100%;
+}
+
+.delete {
+  border: 0;
+  background: #ce8c8c;
+  width: 10%;
+  height: 100%;
 }

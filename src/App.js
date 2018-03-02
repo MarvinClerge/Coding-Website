@@ -9,6 +9,7 @@ import Home from './components/Home'
 import Welcome from './components/Welcome'
 import Navbar from './components/Navbar'
 import CodeContainer from './components/CodeContainer'
+import CodeContainer2 from './components/CodeContainer/CodeContainer2'
 
 import { setUser } from './actions/auth'
 
@@ -26,7 +27,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={Welcome} />
-          <Route path="/code" component={CodeContainer} />
+          <Route path="/code" component={CodeContainer2} />
         </Switch>
       </div>
     );

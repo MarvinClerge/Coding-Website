@@ -1,9 +1,10 @@
- import React, { Component } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { saveCode } from '../actions/code'
 import { logout } from '../actions/auth'
+import { changeSideActive } from '../actions/index'
 import Interpreter from 'js-interpreter'
 
 class Navbar extends Component {
@@ -72,11 +73,12 @@ class Navbar extends Component {
     }
   }
 
-  renderLogout = () => {
-    if (this.props.loggedIn) {
+  renderMenuButton = () => {
+    // window.location.pathname === '/code'
+    if (true) {
       return(
-        <button className="navbar-logout" onClick={this.props.logout}>
-          Logout
+        <button id="menu-button" onClick={this.props.changeSideActive}>
+          ≡
         </button>
       )
     }
@@ -92,7 +94,7 @@ class Navbar extends Component {
         </div>
 
         <div className="navbar-controls">
-          {this.renderLogout()}
+          {this.renderMenuButton()}
         </div>
 
       </div>
@@ -114,7 +116,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
     saveCode: saveCode,
-    logout: logout
+    logout: logout,
+    changeSideActive: changeSideActive
   }, dispatch)
 }
 

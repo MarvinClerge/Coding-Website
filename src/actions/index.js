@@ -4,3 +4,9 @@ export const changeStatus = status => {
     status: status
   }
 }
+
+export const changeSideActive = () => {
+  return {
+    type: "CHANGE_SIDE"
+  }
+}

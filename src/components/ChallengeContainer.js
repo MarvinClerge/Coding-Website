@@ -10,7 +10,7 @@ import '../css/lesson-container.css'
 
 class ChallengeContainer extends Component {
   state = {
-    active: true,
+    active: false,
     creating: false,
     form: {
       title: '',

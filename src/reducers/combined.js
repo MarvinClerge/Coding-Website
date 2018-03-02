@@ -1,5 +1,6 @@
 const initalState = {
   status: 'code',
+  sideActive: true,
   auth: {
     token: null,
     loggedIn: false,
@@ -25,6 +26,11 @@ export default function rootReducer(state = initalState, action){
       return Object.assign({}, state, {
         status: action.status
       })
+
+    case "CHANGE_SIDE":
+      return Object.assign({}, state, {
+        sideActive: !state.sideActive
+      })
     // AUTH
     case "LOGIN":
       return Object.assign({}, state, {
@@ -42,7 +48,6 @@ export default function rootReducer(state = initalState, action){
       });
 
     case "LOGOUT":
-    console.log('atuh');
       return Object.assign({}, state, {
         auth: {
           token: null,
