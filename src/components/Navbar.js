@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { saveCode } from '../actions/code'
+import { logout } from '../actions/auth'
 import Interpreter from 'js-interpreter'
 
 class Navbar extends Component {
@@ -71,14 +72,29 @@ class Navbar extends Component {
     }
   }
 
+  renderLogout = () => {
+    if (this.props.loggedIn) {
+      return(
+        <button className="navbar-logout" onClick={this.props.logout}>
+          Logout
+        </button>
+      )
+    }
+  }
+
   render(){
     return(
       <div className="navbar">
-        {this.props.loggedIn ? 'logged' : 'not logged in'}
-        navbar
-        <Link to="/">Home</Link>
-        <Link to="/code">Code</Link>
-        {this.renderButton()}
+        <div>
+          <Link to="/" className="navbar-title">
+            <h1 id="title">Site Name</h1>
+          </Link>
+        </div>
+
+        <div className="navbar-controls">
+          {this.renderLogout()}
+        </div>
+
       </div>
     )
   }
@@ -97,7 +113,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
-    saveCode: saveCode
+    saveCode: saveCode,
+    logout: logout
   }, dispatch)
 }
 

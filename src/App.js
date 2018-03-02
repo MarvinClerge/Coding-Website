@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Home from './components/Home'
+import Welcome from './components/Welcome'
 import Navbar from './components/Navbar'
 import CodeContainer from './components/CodeContainer'
 
@@ -24,7 +25,7 @@ class App extends Component {
         <Navbar />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Welcome} />
           <Route path="/code" component={CodeContainer} />
         </Switch>
       </div>

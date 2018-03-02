@@ -42,6 +42,7 @@ export default function rootReducer(state = initalState, action){
       });
 
     case "LOGOUT":
+    console.log('atuh');
       return Object.assign({}, state, {
         auth: {
           token: null,

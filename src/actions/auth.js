@@ -64,6 +64,7 @@ export const setUser = token => {
 }
 
 export const logout = () => {
+  console.log('auth');
   localStorage.removeItem('token')
   return {
     type: "LOGOUT"
