@@ -79,7 +79,7 @@ class Code extends Component {
           mode="javascript"
           theme="monokai"
           width="100%"
-          height="60%"
+          height="100%"
           onChange={this.handleEditorChange}
           value={this.props.input}
           focus={true}
@@ -87,16 +87,7 @@ class Code extends Component {
           fontSize="15px"
           editorProps={{$blockScrolling: Infinity}}
         />
-
-        <button
-          id="run-code"
-          onClick={this.handleCodeEvaluation}
-        >run code</button>
-
-        <div id="output">
-          {this.props.output}
-        </div>
-
+        
       </div>
     )
   }

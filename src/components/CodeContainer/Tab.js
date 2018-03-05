@@ -8,6 +8,7 @@ const Tab = props => {
       return "inactive-tab"
     }
   }
+  
   return(
     <div className={handleClass()} onClick={() => props.click(props.type)}>
       {props.title}

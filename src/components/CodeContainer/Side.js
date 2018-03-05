@@ -4,11 +4,12 @@ import { connect } from 'react-redux'
 import Tab from './Tab'
 
 import UserContainer from './User/UserContainer'
+import Output from './Output/Output'
 
 
 class Side extends Component {
   state = {
-    tab: 'user'
+    tab: 'output'
   }
 
   handleClassName = () => {
@@ -28,7 +29,7 @@ class Side extends Component {
   renderTab = () => {
     switch (this.state.tab) {
       case 'output':
-        return <div>OUTPUT</div>
+        return <Output />
       case 'challenge':
         return <div>CHALLENGES</div>
       case 'user':

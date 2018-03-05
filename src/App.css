@@ -181,19 +181,19 @@ body {
   background: darkgrey;
   height: 93vh;
   overflow: auto;
-  transition: .2s;
+  transition: .1s;
 }
 
 .side-active{
   width: 50%;
-  transition: .2s;
+  transition: .1s;
   overflow: auto;
 }
 
 .side-inactive{
   width: 0%;
   overflow: hidden;
-  transition: .2s;
+  transition: .1s;
 }
 
 #run-code {
@@ -215,7 +215,7 @@ body {
 .tab-container {
   display: flex;
   justify-content: center;
-  padding-bottom: 2%;
+  padding-bottom: .5%;
   background: #c7d6d2;
 }
 
@@ -228,6 +228,7 @@ body {
   justify-content: center;
   margin: 0 .1% 0 .1%;
   background: #c7d6d2;
+  cursor: pointer;
 }
 
 .inactive-tab {
@@ -238,6 +239,7 @@ body {
   align-items: center;
   justify-content: center;
   background: #99afaa;
+  cursor: pointer;
 }
 
 
@@ -291,4 +293,43 @@ body {
   background: #ce8c8c;
   width: 10%;
   height: 100%;
+}
+
+/* OUTPUT CONTENT */
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.output-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.output-button {
+  box-sizing: border-box;
+  border: 0;
+  height: 5vh;
+  margin-top: 2%;
+  width: 47%;
+}
+
+.run {
+  margin-right: 2%;
+}
+
+.save {
+
+}
+
+.output-result {
+  box-sizing: border-box;
+  margin-top: 2%;
+  padding: 3%;
+  color: white;
+  background: #595959;
+  width: 96%;
+  min-height: 50vh;
+  overflow-x: auto;
 }

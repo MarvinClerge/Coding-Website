@@ -1,19 +1,5 @@
 import codeAdapter from '../adapter/code_adapter'
 
-export const changeInput = value => {
-  return {
-    type: "INPUT",
-    value: value
-  }
-}
-
-export const changeOutput = value => {
-  return {
-    type: "OUTPUT",
-    value: value
-  }
-}
-
 export const changeCodeValue = (code) => {
   let payload = {
     type: code.type,
