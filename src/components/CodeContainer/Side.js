@@ -3,13 +3,14 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Tab from './Tab'
 
-import UserContainer from './User/UserContainer'
 import Output from './Output/Output'
+import UserContainer from './User/UserContainer'
+import ChallengeContainer from './Challenge/ChallengeContainer'
 
 
 class Side extends Component {
   state = {
-    tab: 'output'
+    tab: 'challenge'
   }
 
   handleClassName = () => {
@@ -31,7 +32,7 @@ class Side extends Component {
       case 'output':
         return <Output />
       case 'challenge':
-        return <div>CHALLENGES</div>
+        return <ChallengeContainer />
       case 'user':
         return <UserContainer/>
       default:

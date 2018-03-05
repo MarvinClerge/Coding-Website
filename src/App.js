@@ -12,12 +12,17 @@ import CodeContainer from './components/CodeContainer'
 import CodeContainer2 from './components/CodeContainer/CodeContainer2'
 
 import { setUser } from './actions/auth'
+import { loadAllChallenges } from './actions/challenge'
 
 
 class App extends Component {
   componentDidMount(){
     const token = localStorage.getItem('token')
-    this.props.setUser(token)
+    if (token) {
+      this.props.setUser(token)
+    } else {
+      this.props.loadAllChallenges()
+    }
   }
 
   render() {
@@ -36,7 +41,8 @@ class App extends Component {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
-    setUser: setUser
+    setUser: setUser,
+    loadAllChallenges: loadAllChallenges
   }, dispatch)
 }
 

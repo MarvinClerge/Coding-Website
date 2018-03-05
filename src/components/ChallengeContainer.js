@@ -6,7 +6,6 @@ import { changeStatus } from '../actions/index'
 import { createChallenge } from '../actions/challenge'
 import { v1 } from './challenge-structure'
 import Challenge from './Challenge'
-import '../css/lesson-container.css'
 
 class ChallengeContainer extends Component {
   state = {
@@ -105,6 +104,7 @@ class ChallengeContainer extends Component {
   }
 
   render(){
+    console.log(this.props.challenges);
     return(
       <div className="left-container">
         <div className={`lesson-container ${this.state.active ? "l-active" : "l-unactive"}`}>

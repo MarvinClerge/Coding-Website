@@ -9,7 +9,8 @@ export const signup = input => {
         let payload = {
           user: data.user,
           token: data.token,
-          codes: data.codes
+          codes: data.codes,
+          challenges: data.challenges
         }
         dispatch(loginReducer(payload))
       } else {
@@ -43,7 +44,7 @@ export const setUser = token => {
   return dispatch => {
     userAdapter.currentUser(token)
     .then(data => {
-      if (token && !data.error) {
+      if (!data.error) {
         localStorage.setItem('token', token)
         let payload = {
           token,
@@ -52,11 +53,6 @@ export const setUser = token => {
           challenges: data.challenges,
         }
         dispatch(loginReducer(payload))
-      } else {
-        let payload = {
-          challenges: data.challenges
-        }
-        dispatch(challengeReducer(payload))
       }
 
     })
@@ -64,7 +60,6 @@ export const setUser = token => {
 }
 
 export const logout = () => {
-  console.log('auth');
   localStorage.removeItem('token')
   return {
     type: "LOGOUT"

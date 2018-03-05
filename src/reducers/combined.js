@@ -40,9 +40,11 @@ export default function rootReducer(state = initalState, action){
           currentUser: action.payload.user
         },
         code: {
+          ...state.code,
           codes: action.payload.codes
         },
         challenge: {
+          ...state.challenges,
           challenges: action.payload.challenges
         }
       });

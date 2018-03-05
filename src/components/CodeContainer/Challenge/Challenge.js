@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { loadChallenge } from '../actions/challenge'
+import { loadChallenge } from '../../../actions/challenge'
 
 class Challenge extends Component {
   getDate = () => {
