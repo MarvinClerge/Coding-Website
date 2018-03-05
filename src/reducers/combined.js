@@ -147,6 +147,15 @@ export default function rootReducer(state = initalState, action){
           }
         })
 
+      case "CREATE_CHALLENGE":
+      console.log(action.payload);
+        return Object.assign({}, state, {
+          challenge: {
+            ...state.challenge,
+            challenges: [action.payload, ...state.challenge.challenges]
+          }
+        })
+
     default:
       return state;
   }

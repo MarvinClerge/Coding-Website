@@ -88,7 +88,7 @@ class Navbar extends Component {
   renderLogoutButton = () => {
     if (this.props.loggedIn) {
       return(
-        <button onClick={this.props.logout}>
+        <button id="logout-button" onClick={this.props.logout}>
           logout
         </button>
       )

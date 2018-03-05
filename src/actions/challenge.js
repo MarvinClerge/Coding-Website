@@ -19,15 +19,22 @@ function challenge(value){
 
 export const createChallenge = value => {
   return dispatch => {
+    console.log(value);
     challengeAdapter.submitChallenge(value)
-    .then(console.log)
-    dispatch(createReducer(value))
+    .then(data => {
+      if (!data.error) {
+        dispatch(createReducer(data))
+      } else {
+        alert(data.error)
+      }
+    })
   }
 }
 
 const createReducer = (payload) => {
   return {
-    type: "HELLO"
+    type: "CREATE_CHALLENGE",
+    payload: payload
   }
 }
 
