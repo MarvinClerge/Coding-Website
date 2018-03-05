@@ -74,11 +74,22 @@ class Navbar extends Component {
   }
 
   renderMenuButton = () => {
+    console.log(this.props);
     // window.location.pathname === '/code'
     if (true) {
       return(
         <button id="menu-button" onClick={this.props.changeSideActive}>
           ≡
+        </button>
+      )
+    }
+  }
+
+  renderLogoutButton = () => {
+    if (this.props.loggedIn) {
+      return(
+        <button onClick={this.props.logout}>
+          logout
         </button>
       )
     }
@@ -95,6 +106,7 @@ class Navbar extends Component {
 
         <div className="navbar-controls">
           {this.renderMenuButton()}
+          {this.renderLogoutButton()}
         </div>
 
       </div>
