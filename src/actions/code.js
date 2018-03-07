@@ -1,19 +1,5 @@
 import codeAdapter from '../adapter/code_adapter'
 
-export const changeInput = value => {
-  return {
-    type: "INPUT",
-    value: value
-  }
-}
-
-export const changeOutput = value => {
-  return {
-    type: "OUTPUT",
-    value: value
-  }
-}
-
 export const changeCodeValue = (code) => {
   let payload = {
     type: code.type,
@@ -30,11 +16,10 @@ export const saveCode = (data) => {
   return dispatch => {
     let input = data.input ? data.input : "//empty"
 
-    codeAdapter.tester({
+    codeAdapter.saveCode({
       user_id: data.userId,
       code_id: data.codeId,
-      input: input,
-      language: "javascript"
+      input: input
     })
     .then(result => {
       if (!data.codeId) {

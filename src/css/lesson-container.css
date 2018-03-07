@@ -32,7 +32,7 @@
 }
 
 
-input[type="text"] {
+/* input[type="text"] {
   box-sizing: border-box;
   border: 0;
   border-bottom: 2px solid black;
@@ -45,4 +45,4 @@ input[type="text"] {
 input[type="text"]:focus {
   outline: none;
   border-bottom: 4px solid green;
-}
+} */

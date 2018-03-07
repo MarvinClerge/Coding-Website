@@ -6,11 +6,10 @@ import { changeStatus } from '../actions/index'
 import { createChallenge } from '../actions/challenge'
 import { v1 } from './challenge-structure'
 import Challenge from './Challenge'
-import '../css/lesson-container.css'
 
 class ChallengeContainer extends Component {
   state = {
-    active: true,
+    active: false,
     creating: false,
     form: {
       title: '',

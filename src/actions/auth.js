@@ -9,9 +9,11 @@ export const signup = input => {
         let payload = {
           user: data.user,
           token: data.token,
-          codes: data.codes
+          codes: data.codes,
+          challenges: data.challenges
         }
         dispatch(loginReducer(payload))
+        window.location.replace("http://localhost:3000/code")
       } else {
         alert(data.error)
       }
@@ -32,6 +34,7 @@ export const login = input => {
           challenges: data.challenges
         }
         dispatch(loginReducer(payload))
+        window.location.replace("http://localhost:3000/code")
       } else {
         alert(data.error)
       }
@@ -43,7 +46,7 @@ export const setUser = token => {
   return dispatch => {
     userAdapter.currentUser(token)
     .then(data => {
-      if (token && !data.error) {
+      if (!data.error) {
         localStorage.setItem('token', token)
         let payload = {
           token,
@@ -52,11 +55,6 @@ export const setUser = token => {
           challenges: data.challenges,
         }
         dispatch(loginReducer(payload))
-      } else {
-        let payload = {
-          challenges: data.challenges
-        }
-        dispatch(challengeReducer(payload))
       }
 
     })

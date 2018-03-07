@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { saveCode } from '../actions/code'
+import { logout } from '../actions/auth'
+import { changeSideActive } from '../actions/index'
 import Interpreter from 'js-interpreter'
 
 class Navbar extends Component {
@@ -15,70 +17,41 @@ class Navbar extends Component {
     })
   }
 
-  challengeClick = event => {
-    // const myInterpreter = new Interpreter(this.props.input);
-    // myInterpreter.run()
-    // debugger
-
-    try {
-      const myInterpreter = new Interpreter(this.props.input);
-      myInterpreter.run()
-
-      let title = myInterpreter.value.properties.title.data
-      let description = myInterpreter.value.properties.description.data
-      let testDescription = myInterpreter.value.properties.test.properties.description.data
-      let testValue = myInterpreter.value.properties.test.properties.value.data
-      let testExpected = myInterpreter.value.properties.test.properties.expected.data
-
-      let challenge;
-      this.props.input.split('}').forEach(x => {
-        if (x.includes("function challenge(value){")) {
-          challenge = "function challenge(value){" + x.split('function challenge(value){')[1] + "}"
-        }
-      })
-
-      let final = {
-        title: title,
-        description: description,
-        testDescription: testDescription,
-        testValue: testValue,
-        testExpected: testExpected,
-        challenge: challenge
-      }
-
-      let builtFunction = `
-        ${final.challenge}
-        if (challenge(${final.testValue}) === ${final.testExpected}) {
-          return "SUCCESS: ${final.testDescription}\nchallenge(${final.testValue}) === ${final.testExpected}"
-        } else {
-          return "FAILURE: ${final.testDescription}\nchallenge(${final.testValue}) === ${final.testExpected}"
-        }
-        `
-
-      console.log(final);
-      console.log(builtFunction);
-
-    } catch (error) {
-      console.log(error);
+  renderMenuButton = () => {
+    console.log(this.props.location.pathname === '/code');
+    if (this.props.location.pathname === '/code') {
+      return(
+        <button id="menu-button" onClick={this.props.changeSideActive}>
+          ≡
+        </button>
+      )
     }
   }
 
-  renderButton = () => {
-    if (this.props.status === 'code') {
-      return <button onClick={this.buttonClick}>Save Code</button>
-    } else if (this.props.status === 'create-challenge') {
-      return <button onClick={this.challengeClick}>Create Challenge</button>
+  renderLogoutButton = () => {
+    if (this.props.loggedIn) {
+      return(
+        <button id="logout-button" onClick={this.props.logout}>
+          <i class="material-icons">exit_to_app</i><p>Logout</p>
+        </button>
+      )
     }
   }
 
   render(){
     return(
       <div className="navbar">
-        {this.props.loggedIn ? 'logged' : 'not logged in'}
-        navbar
-        <Link to="/">Home</Link>
-        <Link to="/code">Code</Link>
-        {this.renderButton()}
+        <div>
+          <Link to="/" className="navbar-title">
+            <h1 id="title">Coding Website</h1>
+          </Link>
+        </div>
+
+        <div className="navbar-controls">
+          {this.renderMenuButton()}
+          {this.renderLogoutButton()}
+        </div>
+
       </div>
     )
   }
@@ -97,7 +70,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
-    saveCode: saveCode
+    saveCode: saveCode,
+    logout: logout,
+    changeSideActive: changeSideActive
   }, dispatch)
 }
 

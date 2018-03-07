@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { loadCode, deleteCode } from '../actions/code'
+import { loadCode, deleteCode } from '../../../actions/code'
 
 class CodeCard extends Component {
   getDate = () => {
     let date = this.props.updated_at.slice(0,10)
-    let time = this.props.updated_at.slice(11,19)
+    let time = this.props.updated_at.slice(11,16)
     return `${date} at ${time}`
   }
 
@@ -20,17 +20,18 @@ class CodeCard extends Component {
 
   render(){
     return(
-      <div className="code-card-container">
-        <div className="code-main">
+      <div className="card-container">
+        <div className="card-time">
           <small>{this.getDate()}</small>
-          <br/>
-          {this.props.content}
+        </div>
 
+        <div className="card-main">
+          {this.props.content}
         </div>
 
         <div className="code-manage">
           <button className="load" onClick={this.handleLoad}>Load</button>
-          <button className="delete" onClick={this.handleDelete}>Delete</button>
+          <button className="delete" onClick={this.handleDelete}>X</button>
         </div>
       </div>
     )

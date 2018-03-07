@@ -3,15 +3,14 @@ const headers = {
   'Accepts': 'application/json'
 }
 
-const tester = (payload) => {
+const saveCode = (payload) => {
   return fetch('http://localhost:3001/api/v1/save', {
     method: "POST",
     headers: headers,
     body: JSON.stringify({
       user_id: payload.user_id,
       code_id: payload.code_id,
-      code: payload.input,
-      language: payload.language
+      code: payload.input
     })
   })
   .then(response => response.json())
@@ -30,7 +29,7 @@ const deleteCode = (code) => {
 
 
 const codeAdapter = {
-  tester: tester,
+  saveCode: saveCode,
   deleteCode: deleteCode,
 }
 

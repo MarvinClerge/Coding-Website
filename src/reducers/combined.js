@@ -1,5 +1,6 @@
 const initalState = {
   status: 'code',
+  sideActive: true,
   auth: {
     token: null,
     loggedIn: false,
@@ -25,6 +26,11 @@ export default function rootReducer(state = initalState, action){
       return Object.assign({}, state, {
         status: action.status
       })
+
+    case "CHANGE_SIDE":
+      return Object.assign({}, state, {
+        sideActive: !state.sideActive
+      })
     // AUTH
     case "LOGIN":
       return Object.assign({}, state, {
@@ -34,9 +40,11 @@ export default function rootReducer(state = initalState, action){
           currentUser: action.payload.user
         },
         code: {
+          ...state.code,
           codes: action.payload.codes
         },
         challenge: {
+          ...state.challenges,
           challenges: action.payload.challenges
         }
       });
@@ -136,6 +144,14 @@ export default function rootReducer(state = initalState, action){
           challenge: {
             ...state.challenge,
             current: action.payload.challenge
+          }
+        })
+
+      case "CREATE_CHALLENGE":
+        return Object.assign({}, state, {
+          challenge: {
+            ...state.challenge,
+            challenges: [action.payload, ...state.challenge.challenges]
           }
         })
 

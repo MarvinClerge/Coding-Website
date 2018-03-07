@@ -4,12 +4,11 @@ import { connect } from 'react-redux'
 
 import AceEditor from 'react-ace'
 import Interpreter from 'js-interpreter'
-// import '../css/code.css'
 
 import 'brace/mode/javascript'
 import 'brace/theme/monokai'
 
-import { changeCodeValue } from '../actions/code'
+import { changeCodeValue } from '../../actions/code'
 
 
 class Code extends Component {
@@ -74,29 +73,21 @@ class Code extends Component {
 
   render(){
     return(
-      <div className="code">
+      <div className="code-editor">
 
         <AceEditor
           mode="javascript"
           theme="monokai"
           width="100%"
-          height="60vh"
+          height="100%"
           onChange={this.handleEditorChange}
           value={this.props.input}
           focus={true}
+          wrapEnabled={true}
           fontSize="15px"
           editorProps={{$blockScrolling: Infinity}}
         />
-
-        <button
-          id="run-code"
-          onClick={this.handleCodeEvaluation}
-        >run code</button>
-
-        <div id="output">
-          {this.props.output}
-        </div>
-
+        
       </div>
     )
   }
