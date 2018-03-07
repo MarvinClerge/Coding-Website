@@ -13,6 +13,12 @@ class Side extends Component {
     tab: 'challenge'
   }
 
+  changeTab = input => {
+    this.setState({
+      tab: input
+    })
+  }
+
   handleClassName = () => {
     if (this.props.active) {
       return "side side-active"
@@ -32,7 +38,7 @@ class Side extends Component {
       case 'output':
         return <Output />
       case 'challenge':
-        return <ChallengeContainer />
+        return <ChallengeContainer changeTab={this.changeTab}/>
       case 'user':
         return <UserContainer/>
       default:

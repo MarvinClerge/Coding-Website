@@ -7,7 +7,7 @@ import Challenge from './Challenge'
 class ChallengeContainer extends Component {
   renderChallenges = () => {
     return this.props.challenges.map(challenge => {
-      return <Challenge key={challenge.id} {...challenge}/>
+      return <Challenge key={challenge.id} {...challenge} changeTab={this.props.changeTab}/>
     })
   }
 

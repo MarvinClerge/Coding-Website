@@ -16,11 +16,10 @@ export const saveCode = (data) => {
   return dispatch => {
     let input = data.input ? data.input : "//empty"
 
-    codeAdapter.tester({
+    codeAdapter.saveCode({
       user_id: data.userId,
       code_id: data.codeId,
-      input: input,
-      language: "javascript"
+      input: input
     })
     .then(result => {
       if (!data.codeId) {

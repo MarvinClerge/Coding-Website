@@ -1,14 +1,13 @@
 import challengeAdapter from '../adapter/challenge_adapter'
 
 export const loadChallenge = challenge => {
-  let content = `//${challenge.description}
-function challenge(value){
-  ${challenge.content}
+  let content = `function challenge(argument){
+  // ENTER CODE HERE
 }`
 
   let payload = {
     challenge,
-    content: content
+    content
   }
 
   return {
@@ -17,15 +16,14 @@ function challenge(value){
   }
 }
 
-export const createChallenge = value => {
+export const createChallenge = data => {
   return dispatch => {
-    console.log(value);
-    challengeAdapter.submitChallenge(value)
-    .then(data => {
-      if (!data.error) {
-        dispatch(createReducer(data))
+    challengeAdapter.submitChallenge(data)
+    .then(response => {
+      if (!response.error) {
+        dispatch(createReducer(response))
       } else {
-        alert(data.error)
+        alert(response.error)
       }
     })
   }

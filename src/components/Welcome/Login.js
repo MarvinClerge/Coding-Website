@@ -24,7 +24,7 @@ class Login extends Component {
   render(){
     return(
       <div className='signup'>
-        <h2>Login</h2>
+        <h2 className="signup-title">Login</h2>
         <form onSubmit={this.onSubmit}>
           <input
             type="text"

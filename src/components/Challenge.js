@@ -16,9 +16,9 @@ class Challenge extends Component {
   render(){
     return(
       <div className="challenge-container">
-        <h3>{this.props.title}</h3>
-        <p>{this.props.description}</p>
         <p>{this.getDate()}</p>
+        <p>{this.props.description}</p>
+        {/* <h3>{this.props.title}</h3> */}
         <button className="challenge-start" onClick={this.startChallenge}>
           <h3>Start Challenge</h3>
         </button>

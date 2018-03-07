@@ -5,22 +5,22 @@ import { loadChallenge } from '../../../actions/challenge'
 
 class Challenge extends Component {
   getDate = () => {
-    let date = this.props.updated_at.slice(0,10)
+    let date = this.props.updated_at.slice(0,10).replace(/-/g, " ")
     return date
   }
 
   startChallenge = event => {
     this.props.loadChallenge(this.props)
+    this.props.changeTab('output')
   }
 
   render(){
     return(
       <div className="challenge-container">
-        <h3>{this.props.title}</h3>
+        <h3 className="challenge-title">{this.props.title}</h3>
         <p>{this.props.description}</p>
-        <p>{this.getDate()}</p>
         <button className="challenge-start" onClick={this.startChallenge}>
-          <h3>Start Challenge</h3>
+          <h4>Start Challenge</h4>
         </button>
       </div>
     )

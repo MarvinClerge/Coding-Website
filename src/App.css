@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
   width: 100vw;
+  font-family: system-ui;
 }
 
 .app {
@@ -11,7 +12,7 @@ body {
 /* NAVBAR CONTENT */
 .navbar {
   width: 100%;
-  background: #282c30;
+  background: #111111;
   height: 7vh;
   padding-left: 2%;
   display: grid;
@@ -63,7 +64,7 @@ body {
 /* WELCOME PAGE CONTENT */
 .welcome {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -113,12 +114,12 @@ body {
 .auth {
   width: 100%;
   height: auto;
-  background: #373f47
+  background: #e8e8e8
 }
 
 .auth-change {
-  /* text-decoration: none; */
-  color: white;
+  color: #446699;
+  margin-bottom: 5vh;
 }
 
 @media screen and (min-width: 1025px) {
@@ -130,22 +131,29 @@ body {
 
 /* SIGNUP CONTENT */
 .signup {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 2%;
+  height: 100%;
+}
+
+.signup-title {
+  color: black;
+  margin-top: 5vh;
 }
 
 .signup-text {
   border: 0;
-  color: white;
-  width: 50%;
+  width: 100%;
   font-size: 1.5vw;
-  height: 5vh;
+  height: 4vh;
   background: none;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid black;
 }
 
 .signup-text::placeholder {
-  color: white;
 }
 
 .signup-text:focus {
@@ -154,7 +162,11 @@ body {
 }
 
 .signup-submit {
-  color: white;
+  width: 100%;
+  border: 0;
+  border: 1px solid #cecece;
+  border-radius: 20px;
+  height: 3vh;
 }
 
 @media screen and (min-width: 1025px) {
@@ -182,7 +194,7 @@ body {
 }
 
 .side {
-  background: darkgrey;
+  background: #efefef;
   height: 93vh;
   overflow: auto;
   transition: .1s;
@@ -220,7 +232,7 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: .5%;
-  background: #c7d6d2;
+  background: #5d85aa;
 }
 
 .active-tab {
@@ -231,7 +243,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 .1% 0 .1%;
-  background: #c7d6d2;
+  background: #5d85aa;
   cursor: pointer;
 }
 
@@ -242,7 +254,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #99afaa;
+  background: #4d6f8e;
   cursor: pointer;
 }
 
@@ -323,6 +335,10 @@ body {
   margin-right: 2%;
 }
 
+.run-test {
+  width: 96%;
+}
+
 .save {
 
 }
@@ -336,4 +352,113 @@ body {
   width: 96%;
   min-height: 50vh;
   overflow-x: auto;
+  resize: vertical;
+}
+
+/* CREATE CHALLENGE CONTENT */
+.create-container {
+  background: #e0dbdb;
+  padding-bottom: 10px;
+}
+
+.create-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.create-inputs > input {
+  margin-top: 1vh;
+  font-size: 20px;
+  width: 80%;
+  height: 3vh;
+  border: 0;
+  border: 1px solid #cecece;
+}
+.create-inputs > textarea {
+  margin-top: 1vh;
+  font-size: 20px;
+  width: 80%;
+  height: 10vh;
+  resize: none;
+  border: 0;
+  border: 1px solid #cecece;
+}
+
+.test-value {
+  margin-top: 1vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.test-value input{
+  width: 60%;
+  height: 3vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+.test-value select{
+  width: 20%;
+  height: 3.4vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+
+.test-expected {
+  margin-top: 1vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.test-expected input{
+  width: 60%;
+  height: 3vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+.test-expected select{
+  width: 20%;
+  height: 3.4vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+
+#submit-challenge {
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+#create-challenge {
+  width: 100%;
+  font-size: 30px;
+  background: none;
+  cursor: pointer;
+}
+
+/* CHALLENGE CONTENT */
+
+.challenge-container {
+  background: #dbdbdb;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.challenge-title {
+  width: 85%;
+  margin: 0;
+}
+
+.challenge-start {
+  background: #ccc9c9;
 }

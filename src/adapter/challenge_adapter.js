@@ -8,8 +8,7 @@ const submitChallenge = (value) => {
     method: "POST",
     headers: headers,
     body: JSON.stringify({
-      form: value.form,
-      user_id: value.user.id
+      ...value
     })
   })
   .then(response => response.json())
