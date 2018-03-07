@@ -119,7 +119,7 @@ class CreateChallenge extends Component {
       )
     } else {
       return(
-        <div>
+        <div className="create-not-logged">
           <p>You must be logged in to create a challenge</p>
         </div>
       )

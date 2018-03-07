@@ -18,8 +18,8 @@ class Navbar extends Component {
   }
 
   renderMenuButton = () => {
-    // window.location.pathname === '/code'
-    if (true) {
+    console.log(this.props.location.pathname === '/code');
+    if (this.props.location.pathname === '/code') {
       return(
         <button id="menu-button" onClick={this.props.changeSideActive}>
           ≡
@@ -32,7 +32,7 @@ class Navbar extends Component {
     if (this.props.loggedIn) {
       return(
         <button id="logout-button" onClick={this.props.logout}>
-          logout
+          <i class="material-icons">exit_to_app</i><p>Logout</p>
         </button>
       )
     }
@@ -43,7 +43,7 @@ class Navbar extends Component {
       <div className="navbar">
         <div>
           <Link to="/" className="navbar-title">
-            <h1 id="title">Site Name</h1>
+            <h1 id="title">Coding Website</h1>
           </Link>
         </div>
 

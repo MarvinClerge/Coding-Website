@@ -15,8 +15,8 @@ class Welcome extends Component {
       <div className="welcome">
 
         <div className="welcome-message">
-          <h2>Welcome to Site Name</h2>
-          <p>It's a website</p>
+          <h2>Welcome to Coding Website</h2>
+          <p>It's a website where you code</p>
           <br/>
           <Link to="/code">
             <button className="welcome-button">

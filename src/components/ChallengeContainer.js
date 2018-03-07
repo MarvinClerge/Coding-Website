@@ -104,7 +104,6 @@ class ChallengeContainer extends Component {
   }
 
   render(){
-    console.log(this.props.challenges);
     return(
       <div className="left-container">
         <div className={`lesson-container ${this.state.active ? "l-active" : "l-unactive"}`}>

@@ -13,6 +13,7 @@ export const signup = input => {
           challenges: data.challenges
         }
         dispatch(loginReducer(payload))
+        window.location.replace("http://localhost:3000/code")
       } else {
         alert(data.error)
       }
@@ -33,6 +34,7 @@ export const login = input => {
           challenges: data.challenges
         }
         dispatch(loginReducer(payload))
+        window.location.replace("http://localhost:3000/code")
       } else {
         alert(data.error)
       }

@@ -28,12 +28,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Navbar />
-
-        <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/code" component={CodeContainer2} />
-        </Switch>
+        <Route path="/" component={Navbar} />
+        <Route exact path="/" component={Welcome} />
+        <Route path="/code" component={CodeContainer2} />
       </div>
     );
   }

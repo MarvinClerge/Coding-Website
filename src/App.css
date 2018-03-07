@@ -7,6 +7,7 @@ body {
 .app {
   display: flex;
   flex-wrap: wrap;
+  background: #f2f2f2;
 }
 
 /* NAVBAR CONTENT */
@@ -20,9 +21,13 @@ body {
   grid-template-areas:
   "title controls";
 }
+.navbar *{
+  height: 7vh;
+}
 
 #title {
-  margin: 0;
+  padding: 0 3vw 1vh 0;
+  float: left;
 }
 
 .navbar-title {
@@ -52,6 +57,17 @@ body {
 
 #logout-button {
   grid-area: code;
+  border: 0;
+  background: #f2f2f2;
+  font-size: 1vw;
+  padding: 0;
+  padding-top: 6%;
+}
+#logout-button i{
+  height: 24px;
+}
+#logout-button p{
+  margin: 0;
 }
 
 @media screen and (min-width: 1025px) {
@@ -87,7 +103,9 @@ body {
 .welcome-button {
   width: 40%;
   height: 20%;
+  font-size: 1vw;
   border: 0;
+  background: #f2f2f2;
 }
 
 
@@ -120,6 +138,11 @@ body {
 .auth-change {
   color: #446699;
   margin-bottom: 5vh;
+  text-decoration: none;
+}
+
+.auth-change:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1025px) {
@@ -275,6 +298,11 @@ body {
   background: white;
   width: 90%;
   height: 20vh;
+
+}
+
+.card-container:hover {
+  box-shadow: 0px 4px 9px 2px rgba(0,0,0,0.16);
 }
 
 .card-time {
@@ -303,12 +331,18 @@ body {
   width: 90%;
   height: 100%;
 }
+.load:hover{
+  background: #89a2b7
+}
 
 .delete {
   border: 0;
   background: #ce8c8c;
   width: 10%;
   height: 100%;
+}
+.delete:hover {
+  background: #ad6e6e
 }
 
 /* OUTPUT CONTENT */
@@ -326,9 +360,13 @@ body {
 .output-button {
   box-sizing: border-box;
   border: 0;
+  border: 1px solid #cecece;
   height: 5vh;
   margin-top: 2%;
   width: 47%;
+}
+.output-button:hover {
+  background: #bfbdbd
 }
 
 .run {
@@ -429,6 +467,11 @@ body {
   border: 1px solid #cecece;
 }
 
+.create-not-logged {
+  width: 100%;
+  text-align: center;
+}
+
 #submit-challenge {
   width: 80%;
   margin-left: 10%;
@@ -436,22 +479,29 @@ body {
 }
 
 #create-challenge {
-  width: 100%;
+  width: 90%;
+  margin: 2% 0 0 5%;
   font-size: 30px;
-  background: none;
+  background: #f2f2f2;
   cursor: pointer;
 }
+
 
 /* CHALLENGE CONTENT */
 
 .challenge-container {
   background: #dbdbdb;
-  width: 90%;
+  width: 80%;
   margin-left: 5%;
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-  padding: 3px;
+  padding: 3% 5% 3% 5%;
+}
+
+.challenge-container:hover {
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0.16);
 }
 
 .challenge-title {
@@ -461,4 +511,9 @@ body {
 
 .challenge-start {
   background: #ccc9c9;
+  border: 1px solid #cecece;
+}
+
+.challenge-start:hover {
+  background: #bfbdbd
 }

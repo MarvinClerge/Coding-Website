@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import { login } from '../../actions/auth'
 
 class Login extends Component {
