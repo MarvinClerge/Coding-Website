@@ -10,7 +10,7 @@ import ChallengeContainer from './Challenge/ChallengeContainer'
 
 class Side extends Component {
   state = {
-    tab: 'challenge'
+    tab: 'output'
   }
 
   changeTab = input => {

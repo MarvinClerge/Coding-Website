@@ -51,20 +51,35 @@ class Output extends Component {
         value: this.props.challenge.test_expected
       })
 
-      let call = `challenge(${value}) === ${expected}`
+      let call = `challenge(${value})`
+      let comparison = `${call} === ${expected}`
 
-      const myInterpreter = new Interpreter(this.props.input + call)
+      const myInterpreter = new Interpreter(this.props.input + comparison)
       myInterpreter.run()
 
       if (myInterpreter.value.data) {
         this.props.changeCodeValue({
           type: 'output',
-          value: `PASSED: ${this.props.challenge.test_description}`
+          value: `
+            PASSED:
+            ${this.props.challenge.test_description}`
         })
       } else {
+
+        const myInterpreter = new Interpreter(this.props.input + call)
+        myInterpreter.run()
+
         this.props.changeCodeValue({
           type: 'output',
-          value: `FAILED: ${this.props.challenge.test_description}`
+          value: `
+          FAILED:
+          ${this.props.challenge.test_description}
+
+          RECEIVED:
+          ${myInterpreter.value.data}
+
+          EXPECTED:
+          ${expected}`
         })
       }
 

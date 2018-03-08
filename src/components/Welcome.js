@@ -27,6 +27,8 @@ class Welcome extends Component {
 
         {this.handleAuthRender()}
 
+        
+
       </div>
     )
   }
