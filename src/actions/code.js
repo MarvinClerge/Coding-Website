@@ -29,8 +29,6 @@ export const saveCode = (data) => {
       }
     })
   }
-
-
 }
 
 const createCodeReducer = data => {
@@ -73,5 +71,11 @@ const deleteCodeReducer = (payload) => {
   return {
     type: "DELETE_CODE",
     payload: payload
+  }
+}
+
+export const reset = () => {
+  return {
+    type: "RESET"
   }
 }

@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Interpreter from 'js-interpreter'
-import { changeCodeValue } from '../../../actions/code'
-import { saveCode } from '../../../actions/code'
+import { changeCodeValue, saveCode, reset } from '../../../actions/code'
 
 class Output extends Component {
   codeEvaluation = event => {
@@ -144,6 +143,10 @@ class Output extends Component {
         <div className="output-result">
           {this.props.output ? this.props.output : "Result will appear here"}
         </div>
+
+        <button id="reset" onClick={this.props.reset}>
+          Reset
+        </button>
       </div>
     )
   }
@@ -165,7 +168,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
     changeCodeValue: changeCodeValue,
-    saveCode: saveCode
+    saveCode: saveCode,
+    reset: reset
   }, dispatch)
 }
 

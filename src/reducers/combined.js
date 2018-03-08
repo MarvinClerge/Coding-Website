@@ -162,6 +162,21 @@ export default function rootReducer(state = initalState, action){
           }
         })
 
+      case "RESET":
+        return Object.assign({}, state, {
+          status: 'code',
+          code: {
+            ...state.code,
+            input: '',
+            output: '',
+            currentId: null
+          },
+          challenge: {
+            ...state.challenge,
+            current: null
+          }
+        })
+
     default:
       return state;
   }

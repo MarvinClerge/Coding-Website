@@ -111,7 +111,7 @@ body {
 
 .section {
   width: 100vw;
-  height: 30vh;
+  height: 32vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,7 +146,7 @@ body {
 
 .section2 {
   width: 100vw;
-  height: 30vh;
+  height: 32vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,6 +460,14 @@ body {
   min-height: 50vh;
   overflow-x: auto;
   resize: vertical;
+}
+
+#reset {
+  border: 0;
+  width: 96%;
+  height: 3vh;
+  margin-top: 1vh;
+  border: 1px solid #cecece;
 }
 
 /* CREATE CHALLENGE CONTENT */

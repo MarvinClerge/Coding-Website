@@ -48,7 +48,7 @@ class App extends Component {
 
               <div className='section2'>
                 <div className='section2-img'>
-                  <img src="https://www.usnews.com/dims4/USNEWS/f462862/2147483647/thumbnail/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fea%2F1a%2F48eb43bf4e708c1e55d6de41dfc1%2F141212-computer-submitted.jpg"/>
+                  <img src="http://absolutetransitions.com/wp-content/uploads/2012/03/Computers-300x225.jpg"/>
                 </div>
 
                 <div className="section2-text">
@@ -66,7 +66,7 @@ class App extends Component {
                 </div>
 
                 <div className='section-img'>
-                  <img src="https://www.usnews.com/dims4/USNEWS/f462862/2147483647/thumbnail/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fea%2F1a%2F48eb43bf4e708c1e55d6de41dfc1%2F141212-computer-submitted.jpg"/>
+                  <img src="https://i.imgur.com/s4dTtBy.jpg"/>
                 </div>
               </div>
 
