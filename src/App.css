@@ -465,6 +465,7 @@ body {
 /* CREATE CHALLENGE CONTENT */
 .create-container {
   background: #e0dbdb;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 

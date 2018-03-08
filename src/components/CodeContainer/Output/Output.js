@@ -13,7 +13,7 @@ class Output extends Component {
       myInterpreter.run()
       this.props.changeCodeValue({
         type: 'output',
-        value: myInterpreter.value.data
+        value: myInterpreter.value.toString()
       })
     } catch (error) {
       this.props.changeCodeValue({
@@ -76,7 +76,7 @@ class Output extends Component {
           ${this.props.challenge.test_description}
 
           RECEIVED:
-          ${myInterpreter.value.data}
+          ${myInterpreter.value.toString()}
 
           EXPECTED:
           ${expected}`

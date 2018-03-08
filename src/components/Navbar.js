@@ -18,7 +18,6 @@ class Navbar extends Component {
   }
 
   renderMenuButton = () => {
-    console.log(this.props.location.pathname === '/code');
     if (this.props.location.pathname === '/code') {
       return(
         <button id="menu-button" onClick={this.props.changeSideActive}>
