@@ -1,4 +1,47 @@
 .code-container {
+  display: flex;
+  height: 93vh;
+  max-width: 100vw;
   width: 100%;
   height: 100%;
+}
+
+.code-editor {
+  background: grey;
+  width: 100%;
+  height: 93vh;
+}
+
+.side {
+  background: #efefef;
+  height: 93vh;
+  overflow: auto;
+  transition: .1s;
+}
+
+.side-active{
+  width: 50%;
+  transition: .1s;
+  overflow: auto;
+}
+
+.side-inactive{
+  width: 0%;
+  overflow: hidden;
+  transition: .1s;
+}
+
+#run-code {
+  width: 100%;
+  height: 5%;
+  background: #282c30;
+  color: white;
+  border: 0;
+}
+
+#output {
+  height: 30%;
+}
+
+@media screen and (min-width: 1025px) {
 }

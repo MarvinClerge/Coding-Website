@@ -29,10 +29,10 @@ class Output extends Component {
         value = `'${data.value}'`
         return value
       case "number":
-        value = parseInt(data.value)
+        value = parseInt(data.value, 10)
         return value
       case "boolean":
-        value = (data.value == 'true')
+        value = (data.value === 'true')
         return value
       default:
     }
@@ -59,7 +59,8 @@ class Output extends Component {
       if (myInterpreter.value.data) {
         this.props.changeCodeValue({
           type: 'output',
-          value: `
+          value: `${this.props.challenge.description}
+
             PASSED:
             ${this.props.challenge.test_description}`
         })
@@ -70,7 +71,8 @@ class Output extends Component {
 
         this.props.changeCodeValue({
           type: 'output',
-          value: `
+          value: `${this.props.challenge.description}
+
           FAILED:
           ${this.props.challenge.test_description}
 

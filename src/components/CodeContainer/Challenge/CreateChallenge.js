@@ -43,7 +43,7 @@ class CreateChallenge extends Component {
   onExpectedChange = event => {
     this.setState({
       testExpected: {
-        ...this.state.testValue,
+        ...this.state.testExpected,
         [event.target.name]: event.target.value
       }
     })
@@ -51,11 +51,10 @@ class CreateChallenge extends Component {
 
   onSubmit = event => {
     event.preventDefault()
-    console.log(this.state);
-    // this.props.createChallenge({
-    //   ...this.state,
-    //   user_id: this.props.user.id
-    // })
+    this.props.createChallenge({
+      ...this.state,
+      user_id: this.props.user.id
+    })
   }
 
   renderForm = () => {
@@ -87,9 +86,10 @@ class CreateChallenge extends Component {
 
 
               <div className="test-expected">
-                <input type="text" name="testExpected" placeholder="expected result"
+                <input type="text" name="value" placeholder="expected result"
                   value={this.state.testExpected.value} onChange={this.onExpectedChange} />
-                <select>
+                <select name="type" onChange={this.onExpectedChange}
+                  value={this.state.testExpected.type}>
                   <option>String</option>
                   <option>Number</option>
                   <option>Boolean</option>
@@ -111,7 +111,7 @@ class CreateChallenge extends Component {
       return(
         <div>
           <button onClick={this.toggleActive} id="create-challenge">
-            Create New Challenge
+            {this.state.active ? "Close" : "Create New Challenge"}
           </button>
 
           {this.renderForm()}

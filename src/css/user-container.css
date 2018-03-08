@@ -1,34 +1,5 @@
-/* Transition times cant be done with display:none */
-.right-container {
-  height: 95%;
-  max-height: 95%;
-  z-index: 6;
-  position: absolute;
-  display: flex;
-  top: 5vh;
-  right: 0;
-}
-
 .user-container {
-  overflow: auto;
-  transition: .2s;
-}
-
-.user-info {
-  text-align: center;
-}
-
-.u-active {
-  width: 45vw;
-  background: #e2e2e2;
-}
-.u-unactive {
-  width: 0vw;
-  background: #cccccc;
-}
-
-.toggle {
-  background: grey;
-  width: 2vw;
-  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

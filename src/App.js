@@ -1,15 +1,13 @@
 import './App.css'
 
 import React, { Component } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import Home from './components/Home'
 import Welcome from './components/Welcome'
 import Navbar from './components/Navbar'
-import CodeContainer from './components/CodeContainer'
-import CodeContainer2 from './components/CodeContainer/CodeContainer2'
+import CodeContainer from './components/CodeContainer/CodeContainer2'
 
 import { setUser } from './actions/auth'
 import { loadAllChallenges } from './actions/challenge'
@@ -42,13 +40,13 @@ class App extends Component {
                 </div>
 
                 <div className='section-img'>
-                  <img src="https://www.usnews.com/dims4/USNEWS/f462862/2147483647/thumbnail/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fea%2F1a%2F48eb43bf4e708c1e55d6de41dfc1%2F141212-computer-submitted.jpg"/>
+                  <img src="https://www.usnews.com/dims4/USNEWS/f462862/2147483647/thumbnail/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fea%2F1a%2F48eb43bf4e708c1e55d6de41dfc1%2F141212-computer-submitted.jpg" alt="code"/>
                 </div>
               </div>
 
               <div className='section2'>
                 <div className='section2-img'>
-                  <img src="http://absolutetransitions.com/wp-content/uploads/2012/03/Computers-300x225.jpg"/>
+                  <img src="http://absolutetransitions.com/wp-content/uploads/2012/03/Computers-300x225.jpg" alt="challenge"/>
                 </div>
 
                 <div className="section2-text">
@@ -66,7 +64,7 @@ class App extends Component {
                 </div>
 
                 <div className='section-img'>
-                  <img src="https://i.imgur.com/s4dTtBy.jpg"/>
+                  <img src="https://i.imgur.com/s4dTtBy.jpg" alt="shrug"/>
                 </div>
               </div>
 
@@ -74,7 +72,7 @@ class App extends Component {
 
           )
         }}/>
-        <Route path="/code" component={CodeContainer2} />
+        <Route path="/code" component={CodeContainer} />
       </div>
     );
   }

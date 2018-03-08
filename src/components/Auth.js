@@ -4,7 +4,6 @@ import Login from './Welcome/Login'
 import Signup from './Welcome/Signup'
 
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 
 class Auth extends Component {
   state = {

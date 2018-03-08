@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux'
 import { saveCode } from '../actions/code'
 import { logout } from '../actions/auth'
 import { changeSideActive } from '../actions/index'
-import Interpreter from 'js-interpreter'
 
 class Navbar extends Component {
   buttonClick = () => {
@@ -31,7 +30,7 @@ class Navbar extends Component {
     if (this.props.loggedIn) {
       return(
         <button id="logout-button" onClick={this.props.logout}>
-          <i class="material-icons">exit_to_app</i><p>Logout</p>
+          <i className="material-icons">exit_to_app</i><p>Logout</p>
         </button>
       )
     }

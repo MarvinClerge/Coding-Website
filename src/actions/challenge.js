@@ -1,7 +1,8 @@
 import challengeAdapter from '../adapter/challenge_adapter'
 
 export const loadChallenge = challenge => {
-  let content = `function challenge(argument){
+  let content = `// ${challenge.description}
+function challenge(argument){
   // ENTER CODE HERE
 }`
 

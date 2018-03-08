@@ -1,0 +1,22 @@
+.auth {
+  width: 100%;
+  height: auto;
+  background: #e8e8e8
+}
+
+.auth-change {
+  color: #446699;
+  margin-bottom: 5vh;
+  text-decoration: none;
+}
+
+.auth-change:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1025px) {
+  .auth {
+    width: 30%;
+    height: 100%;
+  }
+}

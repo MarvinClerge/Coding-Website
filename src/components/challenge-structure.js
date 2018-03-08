@@ -1,1 +1,0 @@
-export const v1 = `//ENTER STARTING CHALLENGE CODE HERE`

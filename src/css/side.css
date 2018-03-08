@@ -1,0 +1,29 @@
+.tab-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: .5%;
+  background: #5d85aa;
+}
+
+.active-tab {
+  width: 55%;
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .1% 0 .1%;
+  background: #5d85aa;
+  cursor: pointer;
+}
+
+.inactive-tab {
+  width: 50%;
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4d6f8e;
+  cursor: pointer;
+}

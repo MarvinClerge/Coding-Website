@@ -1,0 +1,93 @@
+.create-container {
+  background: #e0dbdb;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.create-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.create-inputs > input {
+  margin-top: 1vh;
+  font-size: 20px;
+  width: 80%;
+  height: 3vh;
+  border: 0;
+  border: 1px solid #cecece;
+}
+.create-inputs > textarea {
+  margin-top: 1vh;
+  font-size: 20px;
+  width: 80%;
+  height: 10vh;
+  resize: none;
+  border: 0;
+  border: 1px solid #cecece;
+}
+
+.test-value {
+  margin-top: 1vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.test-value input{
+  width: 60%;
+  height: 3vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+.test-value select{
+  width: 20%;
+  height: 3.4vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+
+.test-expected {
+  margin-top: 1vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.test-expected input{
+  width: 60%;
+  height: 3vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+.test-expected select{
+  width: 20%;
+  height: 3.4vh;
+  font-size: 20px;
+  border: 0;
+  border: 1px solid #cecece;
+}
+
+.create-not-logged {
+  width: 100%;
+  text-align: center;
+}
+
+#submit-challenge {
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+#create-challenge {
+  width: 90%;
+  margin: 2% 0 2% 5%;
+  font-size: 30px;
+  background: #f2f2f2;
+  cursor: pointer;
+  border-radius: 20px;
+}

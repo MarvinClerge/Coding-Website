@@ -1,45 +1,50 @@
-.code-card-container {
-  margin: .2vw auto;
-  background: #f2f2f2;
-  width: 85%;
-  height: 15vh;
-  margin-bottom: 2vh;
-  margin-top: 2vh;
-  padding: .2vw;
+.card-container {
+  margin-top: 2%;
   display: flex;
-  white-space: pre-line;
-
-}
-
-.here{
-  display: flex;
-}
-.here > div {
-  padding: 10px;
-}
-
-.code-main {
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
   width: 90%;
-  overflow: hidden;
+  height: 20vh;
+
+}
+
+.card-time {
+  color: #999999;
+  width: 100%;
+  height: 10%;
+}
+
+.card-main {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70%;
+  white-space: pre-line;
+  padding: 2%;
 }
 
 .code-manage {
+  align-self: flex-end;
+  width: 100%;
+  height: 20%;
 }
 
 .load {
-  box-sizing: border-box;
   border: 0;
-  height: 50%;
-  width: 100%;
-  color: white;
-  background: #588cb7;
+  background: #a7bed1;
+  width: 90%;
+  height: 100%;
+}
+.load:hover{
+  background: #89a2b7
 }
 
 .delete {
-  box-sizing: border-box;
   border: 0;
-  height: 50%;
-  width: 100%;
-  color: white;
-  background: #b75858;
+  background: #ce8c8c;
+  width: 10%;
+  height: 100%;
+}
+.delete:hover {
+  background: #ad6e6e
 }
