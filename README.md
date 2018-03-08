@@ -1,4 +1,4 @@
-view the back for coding website here: 
+View the Backend for Coding Website here: [Backend](https://github.com/MarvinClerge/Coding-Website-Backend)
 
 # Introduction
 Welcome to Coding Website. In this site you can write and manage your code, take on challenges, and write your own.
@@ -33,3 +33,12 @@ Choose the type of value for the expected argument using the dropdown next to th
 6. Run `npm install` to install the required node packages
 7. Run `npm start` to run the backend on localhost:3000
 8. Go to http://localhost:3000
+
+## Tech used
+React
+
+Ruby on Rails
+
+AceEditor
+
+JS-Interpreter
