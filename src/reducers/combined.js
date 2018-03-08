@@ -103,7 +103,7 @@ export default function rootReducer(state = initalState, action){
       return Object.assign({}, state, {
         code: {
           ...state.code,
-          codes: newCodes
+          codes: newCodes,
         }
       });
 
@@ -113,7 +113,6 @@ export default function rootReducer(state = initalState, action){
         code: {
           ...state.code,
           input: action.payload.content,
-          currentId: action.payload.id
         }
       })
 
@@ -122,13 +121,21 @@ export default function rootReducer(state = initalState, action){
         return code.id === action.payload.code_id
       });
 
+      let currentCode;
+      if (state.code.currentId === action.payload.code_id) {
+        currentCode = null
+      } else {
+        currentCode = state.code.currentId
+      }
+
       newCodes = state.code.codes.slice()
       newCodes.splice(index, 1)
 
       return Object.assign({}, state, {
         code: {
           ...state.code,
-          codes: newCodes
+          codes: newCodes,
+          currentId: currentCode
         }
       });
 
