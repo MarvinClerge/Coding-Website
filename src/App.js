@@ -36,7 +36,7 @@ class App extends Component {
                 <div className="section-text">
                   <h4>Write Code</h4>
                   <p>Write and run code using the text editor</p>
-                  <p>Save and mange your code</p>
+                  <p>Save and manage your code</p>
                 </div>
 
                 <div className='section-img'>

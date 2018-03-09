@@ -55,6 +55,9 @@ class CreateChallenge extends Component {
       ...this.state,
       user_id: this.props.user.id
     })
+    this.setState({
+      active: false
+    })
   }
 
   renderForm = () => {
