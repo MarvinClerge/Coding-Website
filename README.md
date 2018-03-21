@@ -1,44 +1,75 @@
-View the Backend for Coding Website here: [Backend](https://github.com/MarvinClerge/Coding-Website-Backend)
+# Coding Website
+Coding Website is an web application that allows users to create, evaluate and take code challenges in sandboxed environment using Javascript ES5
+[Click here to view the backend of Coding Website](https://github.com/MarvinClerge/Coding-Website-Backend)
 
-# Introduction
-Welcome to Coding Website. In this site you can write and manage your code, take on challenges, and write your own.
+## Motivation
+The goal of this web application was to create a website that would allow users to write, execute, save and take on challenges in Javascript.
 
-## Write and Manage Code
-This website allows you to write code in ECMAScript 5. Users have the abliity to write code unobstructed, or open the side panel and gain a varity of tools to manage their code. In the `Output` tab of the side panel you can run, save, and reset your code. In the `My Code` tab you can load and delete your saved code.
+## Tech/framework used
+#### React.js
+Used to create frontend, manage application state, user interface, DOM manipulation, and fetching data from backend API.
+#### Ruby on Rails
+Used to create backend JSON API.
+#### PostgreSQL
+Used to store and manage user information.
+#### AceEditor
+Used for live syntax checking and highlighting of JavaScript code.
+#### JS-Interpreter
+Used to evaluate JavaScript code in a sandboxed environment
 
-## Take on Challenges
-In the `Challenges` tab in the side panel you can view challenges created by yourself and others. Here you can click on the `Start Challenge` button and put yourself to the test. Clicking on the run tests button will give you feedback on on weither you passed or falied the test.
+## Installation
+In order to use this application ruby and node js must be installed
+### MAC OS
+1. Download both the frontend and backend of Coding Website
+2. Go to the backend folder location in your terminal and run `bundle install`
+3. After the installation is complete run `rails db:migrate` and `rails db:seed` to create the database
+4. Run `rails s -p 3001` to start the backend rails server
+5. Go to the frontend folder location in your terminal
+6. Run `npm install` to install required node packages
+7. Run `npm start` to start the frontend server
+8. Go to http://localhost:3000 in your browser
 
-## Write Your Own Challenges
-When logged in you have the ablility to create challenges. In the `Challenges` tab in the side panel click on the `Create New Challenge` button and enter in the require information to create a challenge for all to see.
-#### Title
-This will be the title of the challenge
-#### Description
-This will be the description of what need to be done in the challenge
-#### Test Description
-This will be the description of the test begin run in the challenge
-#### Expected Argument
-This will be the argument that will be placed in the challenge function
-Choose the type of value for the expected argument using the dropdown next to the text field
-#### Expected Result
-This will be the expected return value of the test that determines if there is a passed or fail
-Choose the type of value for the expected argument using the dropdown next to the text field
+## How to use?
+After installation this application offers a variety of activities. Below are the myriad of things you can do:
 
-## Local Installation Instructions
-1. Download both the Frontend and Backend for Coding Website
-2. In your bash terminal to the directory containing the Backend
-3. Run `bundle install` to install the required ruby gems
-4. Run `rails s -p 3001` to run the backend server on localhost:3001
-5. In your bash terminal to the directory containing the Frontend
-6. Run `npm install` to install the required node packages
-7. Run `npm start` to run the backend on localhost:3000
-8. Go to http://localhost:3000
+#### Login
+In top right of the home page is the login section. Here users can create or login to an account.
+#### Code
+After clicking the “Start Coding” button users can write in the editor on the left.
+#### Menu
+User can open the side menu by clicking the ≡ button. There are 3 tabs in the menu Output, Challenges and My Code.
+#### Output
+In the OUTPUT tab of the menu users can run the code, reset the editor, and if logged in save the code.
+#### My Code
+In the MY CODE tab of the menu if logged in users can view, load and delete their code
+#### Challenges
+In the CHALLENGES tab of the menu users can take on challenges created by other users. If logged in users can create challenges. When running a challenge the OUTPUT tab will change to only allow running the challenge. Users can switch back to normal by resetting the editor or loading code.
 
-## Tech used
-React
 
-Ruby on Rails
+## Screenshots
+![home page](screen1.png)
+![coding with output](screen2.png)
+![coding with challenge](screen3.png)
 
-AceEditor
+## License
+MIT License
 
-JS-Interpreter
+Copyright (c) 2018 Marvin Clerge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
