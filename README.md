@@ -37,13 +37,13 @@ In top right of the home page is the login section. Here users can create or log
 #### Code
 After clicking the “Start Coding” button users can write in the editor on the left.
 #### Menu
-User can open the side menu by clicking the ≡ button. There are 3 tabs in the menu Output, Challenges and My Code.
+User can open the side menu by clicking the ≡ button. There are 3 tabs in the menu `OUTPUT`, `CHALLENGES` and `MY CODE`.
 #### Output
-In the OUTPUT tab of the menu users can run the code, reset the editor, and if logged in save the code.
+In the `OUTPUT` tab of the menu users can run the code, reset the editor, and if logged in save the code.
 #### My Code
-In the MY CODE tab of the menu if logged in users can view, load and delete their code
+In the `MY CODE` tab of the menu if logged in users can view, load and delete their code
 #### Challenges
-In the CHALLENGES tab of the menu users can take on challenges created by other users. If logged in users can create challenges. When running a challenge the OUTPUT tab will change to only allow running the challenge. Users can switch back to normal by resetting the editor or loading code.
+In the `CHALLENGES` tab of the menu users can take on challenges created by other users. If logged in users can create challenges. When running a challenge the OUTPUT tab will change to only allow running the challenge. Users can switch back to normal by resetting the editor or loading code.
 
 
 ## Screenshots
