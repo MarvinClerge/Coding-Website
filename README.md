@@ -46,11 +46,13 @@ In the `MY CODE` tab of the menu if logged in users can view, load and delete th
 #### Challenges
 In the `CHALLENGES` tab of the menu users can take on challenges created by other users. If logged in users can create challenges. When running a challenge the `OUTPUT` tab will change to only allow running the challenge. Users can switch back to normal by resetting the editor or loading code.
 
-
 ## Screenshots
 ![home page](screen1.png)
 ![coding with output](screen2.png)
 ![coding with challenge](screen3.png)
+
+## Video Demo
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NICcslMG1Mg/0.jpg)](http://www.youtube.com/watch?v=NICcslMG1Mg)
 
 ## License
 MIT License
