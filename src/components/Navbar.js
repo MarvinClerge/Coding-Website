@@ -40,9 +40,11 @@ class Navbar extends Component {
     return(
       <div className="navbar">
         <div>
-          <Link to="/" className="navbar-title">
-            <h1 id="title">Coding Website</h1>
-          </Link>
+          <h1 id="title">
+            <Link to="/" className="navbar-title">
+              Coding Website
+            </Link>
+          </h1>
         </div>
 
         <div className="navbar-controls">

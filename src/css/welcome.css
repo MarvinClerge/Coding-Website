@@ -1,5 +1,4 @@
 .welcome {
-  width: 100vw;
   height: 50vh;
   color: white;
   display: flex;
@@ -9,7 +8,7 @@
 }
 
 .welcome-message {
-  width: 100%;
+  width: 40%;
   text-align: center;
   height: 100%;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
@@ -29,7 +28,6 @@
 }
 
 .section {
-  width: 100vw;
   height: 32vh;
   display: flex;
   justify-content: center;
