@@ -18,11 +18,22 @@ function challenge(argument){
 }
 
 export const createChallenge = data => {
+  let info = {
+    title: data.title,
+    description: data.description,
+    test_description: data.testDescription,
+    test_value: data.testValue.value,
+    test_value_type: data.testValue.type,
+    test_expected: data.testExpected.value,
+    test_expected_type: data.testExpected.type,
+    user_id: data.user_id
+  }
+
   return dispatch => {
-    challengeAdapter.submitChallenge(data)
+    challengeAdapter.submitChallenge(info)
     .then(response => {
       if (!response.error) {
-        dispatch(createReducer(response))
+          dispatch(createReducer(response))
       } else {
         alert(response.error)
       }

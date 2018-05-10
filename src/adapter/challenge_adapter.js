@@ -3,12 +3,12 @@ const headers = {
   'Accepts': 'application/json'
 }
 
-const submitChallenge = (value) => {
+const submitChallenge = (data) => {
   return fetch('http://localhost:3001/api/v1/submit', {
     method: "POST",
     headers: headers,
     body: JSON.stringify({
-      ...value
+      ...data
     })
   })
   .then(response => response.json())
