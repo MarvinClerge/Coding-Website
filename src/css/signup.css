@@ -37,12 +37,20 @@
   height: 3vh;
 }
 
-@media screen and (min-width: 1025px) {
-  .signup  {
-    margin-top: 2%;
+@media screen and (max-width: 425px) {
+  .signup-title {
+    padding-bottom: 20px;
   }
-
   .signup-text {
-    font-size: 1vw;
+    height: 40px;
+    font-size: 20px;
+    text-transform: lowercase;
+  }
+  .signup-submit {
+    font-size: 15px;
+    height: 25px;
+  }
+  .auth-change {
+    padding-top: 20px;
   }
 }

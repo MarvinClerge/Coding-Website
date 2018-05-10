@@ -10,7 +10,7 @@ body {
 }
 
 .app {
-  
+
 }
 
 /* NAVBAR CONTENT */
@@ -24,6 +24,9 @@ body {
 
 /* SIGNUP CONTENT */
 @import url('./css/signup.css');
+
+/* SECTION CONTENT */
+@import url('./css/section.css');
 
 /* CODE CONTAINER CONTENT */
 @import url('./css/code-container.css');

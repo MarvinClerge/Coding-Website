@@ -1,5 +1,5 @@
 .welcome {
-  height: 50vh;
+  height: 400px;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -27,91 +27,26 @@
   background: #f2f2f2;
 }
 
-.section {
-  height: 32vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f2f2f2;
-}
-
-.section-text {
-  width: 30%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 10%;
-}
-  .section-text h4{
-    font-size: 30px;
-    margin-bottom: 0;
-  }
-  .section-text p{
-    margin-bottom: 0;
-  }
-
-.section-img {
-  width: 30%;
-  height: 50%;
-}
-  .section-img img{
-    height: 100%;
-    -webkit-box-reflect:below 0px linear-gradient(to top, rgba(0, 0, 0, .3), rgba(255,255,255,0) 12%); margin:auto;
-  }
-
-
-.section2 {
-  width: 100vw;
-  height: 32vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e5e5e5;
-
-}
-
-.section2-text {
-  width: 30%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 10%;
-}
-  .section2-text h4{
-    font-size: 30px;
-    margin-bottom: 0;
-  }
-  .section2-text p{
-    margin-bottom: 0;
-  }
-
-.section2-img {
-  width: 30%;
-  height: 50%;
-}
-  .section2-img img{
-    height: 100%;
-    float: right;
-    -webkit-box-reflect:below 0px linear-gradient(to top, rgba(0, 0, 0, .3), rgba(255,255,255,0) 12%); margin:auto;
-  }
-
-@media screen and (min-width: 1025px) {
+@media all and (max-width:425px) {
   .welcome {
-    flex-wrap: nowrap;
+    display: inline;
   }
 
   .welcome-message {
     width: 100%;
-    height: 100%;
-    padding-top: 0;
+    font-size: 15px;
+    height: 250px;
+    padding-top: 50px;
   }
+    .welcome-message > h2 {
+      margin: 0;
+    }
 
   .welcome-button {
-    width: 20%;
-    height: 20%;
+    width: 120px;
+    font-size: 12px;
+    margin: 20px 0 0 0;
     border-radius: 5px;
-    border: 0;
+    text-transform: lowercase;
   }
 }
