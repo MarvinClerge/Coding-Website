@@ -1,5 +1,5 @@
 # Coding Website
-Coding Website is an web application that allows users to create, evaluate and take code challenges in sandboxed environment using Javascript ES5
+Coding Website is an web application that allows users to create, evaluate and take code challenges in sandboxed environment using Javascript
 
 [Click here to view the backend of Coding Website](https://github.com/MarvinClerge/Coding-Website-Backend)
 
