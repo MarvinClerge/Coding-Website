@@ -50,7 +50,7 @@ class App extends Component {
                 </div>
 
                 <div className="section2-text">
-                  <h4>Challenges</h4>
+                  <h4>Take Challenges</h4>
                   <p>Take on challenges from our community</p>
                   <p>Build customs challenges and put others to the test</p>
                 </div>

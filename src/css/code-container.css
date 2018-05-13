@@ -1,22 +1,21 @@
 .code-container {
-  display: flex;
-  height: 93vh;
-  max-width: 100vw;
   width: 100%;
   height: 100%;
 }
 
 .code-editor {
   background: grey;
-  width: 100%;
   height: 93vh;
 }
 
 .side {
   background: #efefef;
   height: 93vh;
-  overflow: auto;
-  transition: .1s;
+  position: absolute;
+  transform: translateX(-100%);
+  top: 60px;
+  left: 100%;
+  z-index: 10;
 }
 
 .side-active{
@@ -43,5 +42,15 @@
   height: 30%;
 }
 
-@media screen and (min-width: 1025px) {
+@media all and (max-width: 425px) {
+  .code-editor {
+    height: 95vh;
+  }
+  .side {
+    top: 40px;
+    height: 95vh;
+  }
+  .side-active {
+    width: 300px;
+  }
 }
