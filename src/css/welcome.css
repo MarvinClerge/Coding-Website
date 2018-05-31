@@ -15,10 +15,10 @@
 }
 
 .welcome-button {
-  background: var(--light);
-  height: 30px;
-  width: 100px;
+  padding: 5px 20px;
+  font-size: 18px;
   border-radius: 20px;
+  background: var(--light);
 }
 
 @media all and (min-width:1024px) {

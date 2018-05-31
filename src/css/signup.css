@@ -1,53 +1,24 @@
-/* .signup {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-}
-
 .signup-title {
-  color: black;
-  margin-top: 5vh;
+  margin-bottom: 20px;
 }
 
 .signup-text {
   border: 0;
-  width: 100%;
-  font-size: 1.5vw;
-  height: 4vh;
+  height: 30px;
+  font-size: 16px;
   background: none;
   border-bottom: 3px solid black;
 }
 
-.signup-text::placeholder {
-}
-
 .signup-text:focus {
   outline: none;
-  border-bottom: 3px solid #6c91c2;
+  border-bottom: 3px solid var(--link);
 }
 
 .signup-submit {
-  width: 100%;
-  border: 0;
-  border: 1px solid #cecece;
+  font-size: 18px;
+  padding: 5px 20px;
+  background: white;
+  margin-bottom: 10px;
   border-radius: 20px;
-  height: 3vh;
 }
-
-@media screen and (max-width: 425px) {
-  .signup-title {
-    padding-bottom: 20px;
-  }
-  .signup-text {
-    height: 40px;
-    font-size: 20px;
-    text-transform: lowercase;
-  }
-  .signup-submit {
-    font-size: 15px;
-    height: 25px;
-  }
-} */
