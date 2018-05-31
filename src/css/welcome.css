@@ -27,6 +27,6 @@
   }
 
   .welcome-message {
-    width: calc(100vw - 300px)
+    width: 100%;
   }
 }
