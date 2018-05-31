@@ -1,4 +1,37 @@
 .welcome {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-message {
+  color: white;
+  height: 350px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/background.jpeg") center;
+}
+
+.welcome-button {
+  background: var(--light);
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+@media all and (min-width:1024px) {
+  .welcome {
+    flex-direction: row;
+  }
+
+  .welcome-message {
+    width: calc(100vw - 300px)
+  }
+}
+
+/* .welcome {
   height: 400px;
   color: white;
   display: flex;
@@ -27,7 +60,7 @@
   background: #f2f2f2;
 }
 
-@media all and (max-width:425px) {
+@media all and (max-width:425px) and (max-width: 768px) {
   .welcome {
     display: inline;
   }
@@ -50,3 +83,10 @@
     text-transform: lowercase;
   }
 }
+
+@media all and (max-width:768px) {
+  .welcome {
+    flex-wrap: nowrap;
+
+  }
+} */

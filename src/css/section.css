@@ -1,0 +1,29 @@
+/* .section {
+  position: relative;
+  min-height: 150px;
+  text-align: center;
+}
+
+.section > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+}
+
+.section > div > h4 {
+  font-size: 25px;
+}
+
+.section > div > p {
+  font-size: 16px;
+}
+
+.l-grey {
+  background: #ece7e7;
+}
+
+.d-grey {
+  background: #d2d2d2;
+} */
