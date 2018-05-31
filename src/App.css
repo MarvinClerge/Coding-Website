@@ -8,7 +8,8 @@ body {
   font-family: system-ui;
   background: #f2f2f2;
 
-  --light: #f2f2f2;
+  --light: #e8e8e8;
+  --link: #446699;
 }
 
 .app {

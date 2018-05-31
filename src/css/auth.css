@@ -1,12 +1,14 @@
-/* .auth {
-  width: 100%;
-  height: auto;
-  background: #e8e8e8
+.auth {
+  height: 350px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
 }
 
 .auth-change {
-  color: #446699;
-  margin-bottom: 5vh;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -14,8 +16,8 @@
   text-decoration: underline;
 }
 
-@media all and (max-width:425px) {
-  .auth-change {
-    padding-top: 20px;
+@media all and (min-width:1024px) {
+  .auth {
+    width: 300px;
   }
-} */
+}
