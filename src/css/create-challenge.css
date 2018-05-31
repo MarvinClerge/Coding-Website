@@ -91,3 +91,36 @@
   cursor: pointer;
   border-radius: 20px;
 }
+
+@media all and (max-width:425px) {
+  #create-challenge {
+    font-size: 20px;
+    margin-top: 5%;
+  }
+
+  .create-inputs input {
+    height: 20px;
+    font-size: 15px;
+    padding: 3px;
+  }
+
+  .create-inputs textarea {
+    font-size: 15px;
+    height: 100px;
+    padding: 3px;
+  }
+
+  .create-inputs select {
+    font-size: 10px;
+  }
+
+  #submit-challenge {
+    border: 1px solid #939393;
+    padding: 3px;
+    border-radius: 10px;
+  }
+
+  .create-not-logged {
+    padding-top: 10px;
+  }
+}

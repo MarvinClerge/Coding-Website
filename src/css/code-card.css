@@ -48,3 +48,10 @@
 .delete:hover {
   background: #ad6e6e
 }
+
+@media all and (max-width:425px) {
+  .card-container {
+    overflow: hidden;
+    height: 150px;
+  }
+}

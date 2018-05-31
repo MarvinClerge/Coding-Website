@@ -27,3 +27,10 @@
   background: #4d6f8e;
   cursor: pointer;
 }
+
+@media all and (max-width:425px) {
+  .active-tab, .inactive-tab {
+    padding: 3px;
+    font-size: 12px;
+  }
+}
