@@ -4,7 +4,7 @@ const headers = {
 }
 
 const submitChallenge = (data) => {
-  return fetch('http://localhost:3001/api/v1/submit', {
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/submit', {
     method: "POST",
     headers: headers,
     body: JSON.stringify({
@@ -15,7 +15,7 @@ const submitChallenge = (data) => {
 }
 
 const getChallenges = () => {
-  return fetch('http://localhost:3001/api/v1/challenges')
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/challenges')
   .then(response => response.json())
 }
 

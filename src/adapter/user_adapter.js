@@ -7,7 +7,7 @@ const headers = {
 }
 
 const signup = input => {
-  return fetch('http://localhost:3001/api/v1/signup', {
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/signup', {
     method: 'POST',
     headers: headers,
     body: JSON.stringify({
@@ -20,7 +20,7 @@ const signup = input => {
 }
 
 const login = input => {
-  return fetch('http://localhost:3001/api/v1/login', {
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/login', {
     method: 'POST',
     headers: headers,
     body: JSON.stringify({
@@ -32,7 +32,7 @@ const login = input => {
 }
 
 const currentUser = token => {
-  return fetch('http://localhost:3001/api/v1/current_user', {
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/current_user', {
     headers: headers
   })
   .then(response => response.json())

@@ -4,7 +4,7 @@ const headers = {
 }
 
 const saveCode = (payload) => {
-  return fetch('http://localhost:3001/api/v1/save', {
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/save', {
     method: "POST",
     headers: headers,
     body: JSON.stringify({
@@ -17,7 +17,7 @@ const saveCode = (payload) => {
 }
 
 const deleteCode = (code) => {
-  return fetch('http://localhost:3001/api/v1/delete', {
+  return fetch('https://guarded-citadel-80230.herokuapp.com/api/v1/delete', {
     method: "DELETE",
     headers: headers,
     body: JSON.stringify({
