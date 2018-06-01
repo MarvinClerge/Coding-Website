@@ -12,16 +12,6 @@
   height: calc(100vh - 50px);
 }
 
-.side-active {
-  transition: .2s;
-}
-
-.side-inactive{
-  width: 0;
-  transition: .2s;
-  overflow: hidden;
-}
-
 @media all and (min-width:1024px) {
   .side {
     width: 60vw;
@@ -32,4 +22,14 @@
   .side {
     width: 40vw;
   }
+}
+
+.side-active {
+  transition: .2s;
+}
+
+.side-inactive{
+  width: 0;
+  transition: .2s;
+  overflow: hidden;
 }
