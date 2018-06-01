@@ -1,126 +1,67 @@
-.create-container {
-  background: #e0dbdb;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.create-inputs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.create-inputs > input {
-  margin-top: 1vh;
-  font-size: 20px;
-  width: 80%;
-  height: 3vh;
-  border: 0;
-  border: 1px solid #cecece;
-}
-.create-inputs > textarea {
-  margin-top: 1vh;
-  font-size: 20px;
-  width: 80%;
-  height: 10vh;
-  resize: none;
-  border: 0;
-  border: 1px solid #cecece;
-}
-
-.test-value {
-  margin-top: 1vh;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
-.test-value input{
-  width: 60%;
-  height: 3vh;
-  font-size: 20px;
-  border: 0;
-  border: 1px solid #cecece;
-}
-.test-value select{
-  width: 20%;
-  height: 3.4vh;
-  font-size: 20px;
-  border: 0;
-  border: 1px solid #cecece;
-}
-
-.test-expected {
-  margin-top: 1vh;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
-.test-expected input{
-  width: 60%;
-  height: 3vh;
-  font-size: 20px;
-  border: 0;
-  border: 1px solid #cecece;
-}
-.test-expected select{
-  width: 20%;
-  height: 3.4vh;
-  font-size: 20px;
-  border: 0;
-  border: 1px solid #cecece;
-}
-
 .create-not-logged {
-  width: 100%;
+  padding: 10px;
   text-align: center;
 }
 
-#submit-challenge {
-  width: 80%;
-  margin-left: 10%;
-  font-size: 20px;
+.create-container {
+  background: var(--dark);
+  padding: 10px 20px;
 }
 
 #create-challenge {
-  width: 90%;
-  margin: 2% 0 2% 5%;
-  font-size: 30px;
-  background: #f2f2f2;
-  cursor: pointer;
-  border-radius: 20px;
+  background: var(--dark);
+  width: 100%;
+  height: 50px;
+  padding: 10px;
 }
 
-@media all and (max-width:425px) {
-  #create-challenge {
-    font-size: 20px;
-    margin-top: 5%;
-  }
+.create-inputs > input {
+  background: none;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #9c9c9c;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 
-  .create-inputs input {
-    height: 20px;
-    font-size: 15px;
-    padding: 3px;
-  }
+.create-inputs > textarea {
+  background: none;
+  height: 50px;
+  width: 100%;
+  border: 0;
+  resize: vertical;
+  border-bottom: 1px solid #9c9c9c;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 
-  .create-inputs textarea {
-    font-size: 15px;
-    height: 100px;
-    padding: 3px;
-  }
+.test-value > input, .test-expected > input {
+  width: 70%;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #9c9c9c;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 
-  .create-inputs select {
-    font-size: 10px;
-  }
+.test-value > select, .test-expected > select {
+  width: 30%;
+  background: white;
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid #9c9c9c;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 
-  #submit-challenge {
-    border: 1px solid #939393;
-    padding: 3px;
-    border-radius: 10px;
-  }
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #687294
+}
 
-  .create-not-logged {
-    padding-top: 10px;
-  }
+#submit-challenge {
+  width: 100%;
+  font-size: 20px;
+  background: white;
+  border-radius: 10px;
 }

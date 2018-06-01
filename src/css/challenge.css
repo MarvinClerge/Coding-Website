@@ -1,35 +1,19 @@
 .challenge-container {
-  background: #dbdbdb;
+  left: 10%;
   width: 80%;
-  margin-left: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  display: flex;
-  flex-direction: column;
-  padding: 3% 5% 3% 5%;
-}
-
-.challenge-title {
-  width: 85%;
-  margin: 0;
+  min-height: 150px;
+  padding: 10px;
+  position: relative;
+  background: #dbdbdb;
+  margin: 20px 0;
 }
 
 .challenge-start {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  margin: 15px 0 0 0;
+  position: absolute;
   background: #ccc9c9;
-  border: 1px solid #cecece;
-}
-
-.challenge-start:hover {
-  background: #bfbdbd
-}
-
-@media all and (max-width:425px) {
-  .challenge-container {
-    margin: 15px 30px;
-  }
-
-  .challenge-start {
-    height: 40px;
-    margin: 10px 0 0 0;
-  }
 }

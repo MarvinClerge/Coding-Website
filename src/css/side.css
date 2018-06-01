@@ -1,36 +1,18 @@
 .tab-container {
   display: flex;
-  justify-content: center;
-  padding-bottom: .5%;
-  background: #5d85aa;
+  text-align: center;
+}
+
+.active-tab, .inactive-tab {
+  width: 50%;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .active-tab {
-  width: 55%;
-  height: 5vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 .1% 0 .1%;
   background: #5d85aa;
-  cursor: pointer;
 }
 
 .inactive-tab {
-  width: 50%;
-  height: 5vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #4d6f8e;
-  cursor: pointer;
-}
-
-@media all and (max-width:425px) {
-  .active-tab, .inactive-tab {
-    padding: 3px;
-    font-size: 12px;
-  }
 }

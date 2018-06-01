@@ -10,15 +10,10 @@
   position: absolute;
   background: #efefef;
   height: calc(100vh - 50px);
+  overflow: scroll;
 }
 
 @media all and (min-width:1024px) {
-  .side {
-    width: 60vw;
-  }
-}
-
-@media all and (min-width:2560px) {
   .side {
     width: 40vw;
   }
