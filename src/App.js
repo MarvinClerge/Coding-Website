@@ -31,31 +31,6 @@ class App extends Component {
           return(
             <div>
               <Welcome />
-
-              <div className='section d-grey'>
-                <div>
-                  <h4>Write Code</h4>
-                  <p>Write and run code using the text editor</p>
-                  <p>Save and manage your code</p>
-                </div>
-              </div>
-
-              <div className='section l-grey'>
-                <div>
-                  <h4>Take Challenges</h4>
-                  <p>Take on challenges from our community</p>
-                  <p>Build customs challenges and put others to the test</p>
-                </div>
-              </div>
-
-              <div className='section d-grey'>
-                <div>
-                  <h4>Third thing</h4>
-                  <p>Can't think of anything yet</p>
-                  <p>It will be awesome when I do</p>
-                </div>
-              </div>
-
             </div>
 
           )
